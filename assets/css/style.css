@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: red;
+    --primary-text-color: #000;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Header */
+header {
+    height: 100px;
+    padding: 8px 32px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header .logo {
+    height: 100%;
+}
+
+header .menu {
+    font-size: 32px;
+    line-height: 84px;
+}
+
+header .menu-btn:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/* Hamburger menu*/
+
+header .sub-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+    justify-content: right;
+}
+
+header .sub-menu.show {
+    display: flex;
+}
+
+header .sub-menu-container {
+    background-color: #fff;
+}
+
+header .sub-menu-container .menu-list {
+    list-style: none;
+}
+
+header .sub-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    padding: 14px 0;
+}
+
+header .sub-menu-header .sub-menu-logo {
+    height: 24px;
+    padding-left: 16px;
+}
+
+header .sub-menu-header .sub-menu-closebtn {
+    padding-right: 15px;
+}
+
+header .sub-menu-header .sub-menu-closebtn:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+header .sub-menu-container li {
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+    line-height: 56px;
+    font-size: 24px;
+}
+
+header .sub-menu-container li:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+header .sub-menu-container a {
+    color: var(--primary-text-color);
+    display: block;
+    text-decoration: none;
+    padding: 0px 72px 0px 16px;
+}
+
+#home {
+    
+}
+
+#home .home-bg {
+    background: ;
+}
+
+#history {
+
+}
+
+#department {
+
+}
+
+#jsc {
+
+}
+
+#activities {
+
+}
+
+#interview {
+
+}
+
+#quiz {
+
+}
+
+
+footer {
+
+}
