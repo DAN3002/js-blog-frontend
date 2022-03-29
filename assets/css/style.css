@@ -14,8 +14,9 @@ html {
 }
 /* Header */
 header {
+    background-color: #ccc;
     height: 100px;
-    padding: 8px 32px;
+    padding: 8px 32px 0;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -46,7 +47,7 @@ header .sub-menu {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     display: none;
     justify-content: right;
 }
@@ -57,6 +58,7 @@ header .sub-menu.show {
 
 header .sub-menu-container {
     background-color: #fff;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 
 header .sub-menu-container .menu-list {
@@ -88,13 +90,17 @@ header .sub-menu-header .sub-menu-closebtn:hover {
 
 header .sub-menu-container li {
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
-    line-height: 56px;
+    /* line-height: 56px; */
     font-size: 24px;
 }
 
-header .sub-menu-container li:hover {
+header .sub-menu-container .sub-menu-child:hover {
     cursor: pointer;
-    opacity: 0.6;
+    background-color: #ccc;
+}
+
+header .sub-menu-container .sub-menu-icon {
+    width: 48px;
 }
 
 header .sub-menu-container a {
