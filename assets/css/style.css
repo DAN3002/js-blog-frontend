@@ -7,6 +7,7 @@
 :root {
     --primary-color: red;
     --primary-text-color: #000;
+    --secondary-text-color: #fff;
 }
 
 html {
@@ -14,7 +15,6 @@ html {
 }
 /* Header */
 header {
-    background-color: #ccc;
     height: 100px;
     padding: 8px 32px 0;
     display: flex;
@@ -101,6 +101,7 @@ header .sub-menu-container .sub-menu-child:hover {
 
 header .sub-menu-container .sub-menu-icon {
     width: 48px;
+    text-align: left;
 }
 
 header .sub-menu-container a {
@@ -111,11 +112,31 @@ header .sub-menu-container a {
 }
 
 #home {
-    
+    /* height: 400px; */
 }
 
 #home .home-bg {
-    background: ;
+    background: url('/assets/img/banner.png') top center / contain no-repeat;
+    
+    padding-top: 38%;
+    position: relative;
+    z-index: -10;
+    /* filter: blur(2px); */
+}
+
+#home .home-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 6em;
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    mix-blend-mode: overlay;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 #history {
