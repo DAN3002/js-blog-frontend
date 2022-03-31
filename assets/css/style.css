@@ -163,7 +163,7 @@ header .sub-menu-container a {
     padding: 0 200px;
     color: var(--secondary-text-color);
     text-shadow: 0 0 5px rgba(0, 0, 0, 1);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 #history {
