@@ -41,7 +41,7 @@ header {
     z-index: 1000;
 }
 
-header .menu-btn {
+header #menu-btn {
     display: flex;
     font-size: 32px;
     background-color: #fff;
@@ -53,14 +53,14 @@ header .menu-btn {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-header .menu-btn:hover {
+header #menu-btn:hover {
     cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
 /* Hamburger menu*/
 
-header .sub-menu {
+header #sub-menu {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -73,16 +73,17 @@ header .sub-menu {
     z-index: 1000;
 }
 
-header .sub-menu.show {
+header #sub-menu.show {
     display: flex;
 }
 
-header .sub-menu-container {
+header #sub-menu-container {
     background-color: #fff;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    animation: subMenuFadeIn ease 0.2s;
 }
 
-header .sub-menu-container .menu-list {
+header #sub-menu-container .menu-list {
     list-style: none;
 }
 
@@ -96,13 +97,13 @@ header .sub-menu-header {
 }
 
 header .sub-menu-header .sub-menu-logo {
-    height: 24px;
+    height: 28px;
     padding-left: 16px;
 }
 
 header .sub-menu-header .sub-menu-closebtn {
     padding-right: 24px;
-    font-size: 32px;
+    font-size: 38px;
 }
 
 header .sub-menu-header .sub-menu-closebtn:hover {
@@ -110,27 +111,45 @@ header .sub-menu-header .sub-menu-closebtn:hover {
     opacity: 0.6;
 }
 
-header .sub-menu-container li {
+header #sub-menu-container li {
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
     /* line-height: 56px; */
     font-size: 24px;
 }
 
-header .sub-menu-container .sub-menu-child:hover {
+header #sub-menu-container .sub-menu-child:hover {
     cursor: pointer;
     background-color: #ccc;
 }
 
-header .sub-menu-container .sub-menu-icon {
+header #sub-menu-container .sub-menu-icon {
     width: 36px;
     text-align: right;
 }
 
-header .sub-menu-container a {
+header #sub-menu-container a {
     color: #000;
     display: block;
     text-decoration: none;
     padding: 0px 72px 0px 16px;
+}
+
+@keyframes subMenuFadeIn {
+    from {
+        transform: translateX(800px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes subMenuFadeOut {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateX(800px);
+    }
 }
 
 #home {
@@ -155,7 +174,7 @@ header .sub-menu-container a {
     bottom: 0px;
     width: 100%;
     height: 50px;
-    background: linear-gradient(to top, #ea828a, transparent);
+    background: linear-gradient(to top, #24325b, transparent);
     z-index: 100;
 }
 
@@ -209,7 +228,7 @@ header .sub-menu-container a {
 #home .home-sec {
     position: relative;
     padding: 100px;
-    background-color: #ea828a;
+    background-color: #24325b;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -220,9 +239,9 @@ header .sub-menu-container a {
     background-color: #fff;
     padding: 10px;
     border: 1px solid #BFBFBF;
-    -ms-transform: rotate(3deg); /* IE 9 */
-    -webkit-transform: rotate(3deg); /* Safari */
-    transform: rotate(3deg);
+    -ms-transform: rotate(-3deg); /* IE 9 */
+    -webkit-transform: rotate(-3deg); /* Safari */
+    transform: rotate(-3deg);
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -231,20 +250,21 @@ header .sub-menu-container a {
 }
 
 #home .home-sec .home-sec-text {
-    width: 45%;
+    width: 40%;
 }
 
 #home .home-sec h2 {
     font-size: 3.5em;
     margin-bottom: 10px;
-    color: #112A46;
+    color: #fff;
+    text-align: right;
 }
 
 #home .home-sec p {
     font-size: 1.5em;
     line-height: 1.5;
-    color: #112A46;
-    text-align: justify;
+    color: #fff;
+    text-align: right;
 }
 
 #history {

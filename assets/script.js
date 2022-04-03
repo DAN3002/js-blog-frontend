@@ -54,4 +54,29 @@ window.onload=function(){
     })
     // -----------
 
+    // Hamburger Menu function
+    var menuBtn = document.getElementById('menu-btn');
+    var closeBtn = document.getElementById('close-menu-btn');
+    var subMenu = document.getElementById('sub-menu');
+    var subMenuContainer = document.getElementById('sub-menu-container');
+    
+    menuBtn.addEventListener('click', showMenu)
+
+    closeBtn.addEventListener('click', closeMenu)
+
+    subMenu.addEventListener('click', closeMenu)
+
+    subMenuContainer.addEventListener('click', function (event) {
+        event.stopPropagation()
+    })
+
+    function showMenu() {
+        subMenu.classList.add('show')
+    }
+    
+    function closeMenu() {
+        setTimeout(function(){
+            subMenu.classList.remove('show')
+        }, 200); 
+    }
 }
