@@ -188,6 +188,10 @@ header .sub-menu-container a {
     bottom: 0;
 }
 
+#home .home-bg #stars {
+    opacity: 0.1;
+}
+
 #home .home-bg #left_far_rock {
     top: 0;
     right: 0;
