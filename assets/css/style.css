@@ -171,7 +171,7 @@ header #sub-menu-container a {
 #home .home-bg::before {
     content: '';
     position: absolute;
-    bottom: 0px;
+    bottom: -20px;
     width: 100%;
     height: 50px;
     background: linear-gradient(to top, #24325b, transparent);
@@ -250,7 +250,7 @@ header #sub-menu-container a {
 }
 
 #home .home-sec .home-sec-text {
-    width: 40%;
+    width: 43%;
 }
 
 #home .home-sec h2 {
@@ -372,11 +372,6 @@ header #sub-menu-container a {
     z-index: -10;
 }
 
-/* #interview .interview-container:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
-    cursor: pointer;
-} */
-
 #interview .interview-container .interview-back {
     height: 100%;
     width: 100%;
@@ -447,4 +442,24 @@ header #sub-menu-container a {
 
 footer {
 
+}
+
+#virus {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+}
+
+.bug {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0;;
+}
+
+.bug img {
+    width: 100%;
 }

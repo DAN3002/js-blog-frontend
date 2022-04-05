@@ -32,8 +32,6 @@ window.onload=function(){
             value = homeScrollLimit;
         }
 
-        console.log(value);
-
         logo_long.style.opacity = 1 - value * 0.0065;
         home_background.style.top = value + 'px';
         sun.style.top = value * 0.25 + 'px';
@@ -79,4 +77,60 @@ window.onload=function(){
             subMenu.classList.remove('show')
         }, 200); 
     }
+
+    // Virus function
+    var bugsAppear = false;
+    window.addEventListener('scroll', function() {
+        const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = window.scrollY;
+        
+        if ((Math.ceil(scrolled - 0.5)) === scrollAble && bugsAppear == false) {
+            var bugs = document.querySelectorAll('#virus #bugs .bug');
+            var bugs_array = [...bugs];
+            bugsAppear = true;
+        
+            bugs_array.forEach(bug => {
+                bug.style.opacity = 1;
+                bug.style.left = Math.floor(window.innerWidth / 2) + "px";
+                bug.style.top = Math.round(window.innerHeight / 2) + "px";
+                var style = window.getComputedStyle(bug);
+            
+                bug.style.transform = "rotate(" + 0 + "deg)"
+                var spx = Math.floor(Math.random() * 10);
+                var spy = Math.floor(Math.random() * 10);
+                var rotateOffset = 1;
+            
+                function move(){
+                    var rotate = parseInt(bug.style.transform.replace(/[^\d]+/g, ""));
+                    var x = parseInt(bug.style.left.replace("px", ""));
+                    var y = parseInt(bug.style.top.replace("px", ""));
+                
+                    if (x + parseInt(style.width.replace("px", "")) > window.innerWidth){
+                        spx = -spx;
+                    }
+                    if (y + parseInt(style.height.replace("px", "")) > window.innerHeight){
+                        spy = -spy;
+                    }
+                    if (x < 0){
+                        spx = -spx;
+                    }
+                    if (y < 0){
+                        spy = -spy;
+                    }
+                    x += spx;
+                    y -= spy;
+                    rotate += rotateOffset;
+                    bug.style.transform = "rotate(" + rotate + "deg)"
+                    bug.style.left = x + "px";
+                    bug.style.top = y + "px"; 
+                }
+                setInterval(move, 10);
+                setInterval( () => {
+                    rotateOffset = -rotateOffset;
+                }, 500)
+            });
+
+        };
+    });
+
 }
