@@ -90,6 +90,7 @@ window.onload=function(){
             virusIsAppear = true;
             virusAppear();
             hideText();
+            changeHomePage();
         };
     });
     
@@ -146,9 +147,23 @@ window.onload=function(){
         
         for (var i = 0; i < virus_hideText_list.length; i++) {
             var virus_hideText = virus_hideText_list[i].innerHTML
-            var hidedText = virus_hideText.replace(/[u|e|ê|o|a|ả|i|c|l|n|h|t|ư|đ]/g, '❤️️');
+            var hidedText = virus_hideText.replace(/[u|e|ê|o|a|ả|i|c|l|n|h|t|ư|đ]/g, '☭');
             virus_hideText_list[i].innerHTML = hidedText;
         }
+    }
+
+    function changeHomePage () {
+        var virus_overlay = document.getElementById('virus_overlay');
+        console.log(virus_overlay);
+
+        home_background.src="../assets/img/banner/virus/background.png";
+        stars.src="../assets/img/banner/virus/stars.png";
+        sun.src="../assets/img/banner/virus/moon.png";
+        logo_long.src="../assets/img/banner/virus/logo-long.png";
+
+        light.style.display = 'none';
+        night_overlay.style.display = 'none';
+        virus_overlay.style.opacity = 1;
     }
     // --------------------------------
 }
