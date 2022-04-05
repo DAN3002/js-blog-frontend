@@ -87,37 +87,28 @@ window.onload=function(){
         const scrolled = window.scrollY;
         
         if ((Math.ceil(scrolled - 0.5)) === scrollAble && virusIsAppear == false) {
+            virusIsAppear = true;
             virusAppear();
             hideText();
         };
     });
     
-    function hideText() {
-        var virus_hideText_list = document.querySelectorAll('.virus_hideText_list');
-        
-        for (var i = 0; i < virus_hideText_list.length; i++) {
-            var virus_hideText = virus_hideText_list[i].innerHTML
-            var hidedText = virus_hideText.replace(/[o|l|n|i|h|t|ê]/g, '▃');
-            virus_hideText_list[i].innerHTML = hidedText;
-        }
-    }
-
+    
     function virusAppear () {
         var bugs = document.querySelectorAll('#virus #bugs .bug');
         var bugs_array = [...bugs];
-        virusIsAppear = true;
-    
+        
         bugs_array.forEach(bug => {
             bug.style.opacity = 1;
             bug.style.left = Math.floor(window.innerWidth / 2) + "px";
             bug.style.top = Math.round(window.innerHeight / 2) + "px";
             var style = window.getComputedStyle(bug);
-        
+            
             bug.style.transform = "rotate(" + 0 + "deg)"
             var spx = Math.floor(Math.random() * 10);
             var spy = Math.floor(Math.random() * 10);
             var rotateOffset = 1;
-        
+            
             function move(){
                 var rotate = parseInt(bug.style.transform.replace(/[^\d]+/g, ""));
                 var x = parseInt(bug.style.left.replace("px", ""));
@@ -147,6 +138,17 @@ window.onload=function(){
                 rotateOffset = -rotateOffset;
             }, 500)
         });
+    }
+
+    // Thêm class virus_hideText_list vào những chỗ cần ẩn chữ
+    function hideText() {
+        var virus_hideText_list = document.querySelectorAll('.virus_hideText_list');
+        
+        for (var i = 0; i < virus_hideText_list.length; i++) {
+            var virus_hideText = virus_hideText_list[i].innerHTML
+            var hidedText = virus_hideText.replace(/[u|e|ê|o|a|ả|i|c|l|n|h|t|ư|đ]/g, '❤️️');
+            virus_hideText_list[i].innerHTML = hidedText;
+        }
     }
     // --------------------------------
 }
