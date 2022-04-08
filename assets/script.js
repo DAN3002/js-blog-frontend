@@ -86,7 +86,7 @@ window.onload=function(){
         const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
         const scrolled = window.scrollY;
         
-        if ((Math.ceil(scrolled - 0.5)) === scrollAble && virusIsAppear == false) {
+        if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
             virusIsAppear = true;
             
             virusAppear();
@@ -105,7 +105,7 @@ window.onload=function(){
         // for (var i = 0; i < 20; i++) {
         //     bugs_array[i] = [...bugs];
         // }
-        console.log(bugs_array);
+        // console.log(bugs_array);
         
         bugs_array.forEach(bug => {
             bug.style.opacity = 1;
