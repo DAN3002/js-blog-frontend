@@ -11,6 +11,7 @@ html {
 }
 
 :root {
+    --theme-color: #24325b;
     --primary-background-color: #EC008C;
     --secondary-background-color: #83004C;
     --primary-text-color: #000;
@@ -228,7 +229,7 @@ header #sub-menu-container a {
 #home .home-sec {
     position: relative;
     padding: 100px;
-    background-color: #24325b;
+    background-color: var(--theme-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -325,7 +326,7 @@ header #sub-menu-container a {
     justify-content: center;
     width: 62%;
     padding: 0 5%;
-    font-size: 2.1vw;
+    font-size: 1.8vw;
     background-color: #fff;
     color: var(--tertiary-text-color);
     box-shadow: 0 0 16px #000,0 0 32px #000;
@@ -451,15 +452,72 @@ footer {
     left: 0;
     right: 0;
     z-index: 2000;
+    display: none;
 }
 
-.bug {
+#virus .bug {
     position: absolute;
     width: 100px;
     height: 100px;
     opacity: 0;;
 }
 
-.bug img {
+#virus .bug img {
     width: 100%;
+}
+
+footer {
+    display: flex;
+    height: 150px;
+    background-color: var(--theme-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 2500;
+}
+
+footer .footer_text {
+    font-size: 24px;
+    width: 25%;
+    color: var(--secondary-text-color);
+}
+
+footer .footer_password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+footer .footer_password h2 {
+    color: var(--secondary-text-color);
+    margin-bottom: 16px;
+}
+
+footer .footer_password input {
+    margin-bottom: 12px;
+    padding: 6px 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer .footer_password button {
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+footer .footer_bug_img {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+footer .footer_bug_img img {
+    height: 100%;
+    width: 25%;
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Safari */
+    transform: rotate(-45deg);
 }

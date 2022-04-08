@@ -88,6 +88,7 @@ window.onload=function(){
         
         if ((Math.ceil(scrolled - 0.5)) === scrollAble && virusIsAppear == false) {
             virusIsAppear = true;
+            
             virusAppear();
             hideText();
             changeHomePage();
@@ -96,8 +97,15 @@ window.onload=function(){
     
     
     function virusAppear () {
+        var virus = document.getElementById('virus');
+        virus.style.display = 'block';
+
         var bugs = document.querySelectorAll('#virus #bugs .bug');
         var bugs_array = [...bugs];
+        // for (var i = 0; i < 20; i++) {
+        //     bugs_array[i] = [...bugs];
+        // }
+        console.log(bugs_array);
         
         bugs_array.forEach(bug => {
             bug.style.opacity = 1;
@@ -147,14 +155,18 @@ window.onload=function(){
         
         for (var i = 0; i < virus_hideText_list.length; i++) {
             var virus_hideText = virus_hideText_list[i].innerHTML
-            var hidedText = virus_hideText.replace(/[u|e|ê|o|a|ả|i|c|l|n|h|t|ư|đ]/g, '☭');
-            virus_hideText_list[i].innerHTML = hidedText;
+
+            var hidedText = virus_hideText.replace(/[b]/g, '🔼');
+            var hidedText2 = hidedText.replace(/[ì]/g, '👨🏻‍💼');
+            var hidedText3 = hidedText2.replace(/[n]/g, '🔽');
+            var hidedText4 = hidedText3.replace(/[h]/g, '🙍🏻‍♂️');
+
+            virus_hideText_list[i].innerHTML = hidedText4;
         }
     }
 
     function changeHomePage () {
         var virus_overlay = document.getElementById('virus_overlay');
-        console.log(virus_overlay);
 
         home_background.src="../assets/img/banner/virus/background.png";
         stars.src="../assets/img/banner/virus/stars.png";
