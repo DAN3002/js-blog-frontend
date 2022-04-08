@@ -281,7 +281,7 @@ header #sub-menu-container a {
 }
 
 #jsc .jsc-img {
-    background: url('/assets/img/japanese-temple.jpg') top center / cover no-repeat;
+    background: url('/assets/img/JscBack.png') top center / cover no-repeat;
     padding-top: 56%;
     position: relative;
     z-index: -10;
@@ -297,7 +297,7 @@ header #sub-menu-container a {
     align-items: center;
     width: 35%;
     padding: 0 2%;
-    font-size: 7vw;
+    font-size: 5vw;
     background-color: #fff;
     mix-blend-mode: screen;
     color: #000;
@@ -312,7 +312,7 @@ header #sub-menu-container a {
     left: 0;
     width: 35%;
     padding: 0 20px;
-    box-shadow: 0 0 16px #000,0 0 32px #000;
+
 }
 
 #jsc .jsc-desc {
@@ -338,9 +338,100 @@ header #sub-menu-container a {
     display: flex;
 }
 
-#activities {
+#activities .activity-title{
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.image-grid {
+    --gap: 18px;
+    --num-columns: 2;
+    --row-height: 515px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(var(--num-columns), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
 
 }
+
+.image-grid .pictureLayer > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#activities .pictureLayer {
+    animation: slideMe1 .7s ease-in-out;
+    z-index: -5;
+}
+
+.image__img {
+    display: block;
+    z-index: 0;
+    
+}
+
+.heading {
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+	font-weight: bold;	
+    font-size: 35px;
+    text-align: center;
+    margin: 5%;
+    z-index: 10;
+    
+}
+
+.content {
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+	font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    z-index: 10;
+}
+
+.transparent-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+@keyframes slideMe1 {
+    0%{
+        transform: translateX(-500px) opacity(0%);
+    }
+    100%{
+        transform: opacity(100%);
+    }
+}
+
+@keyframes slideMe2 {
+    0%{
+        transform: translateX(500px) opacity(0%);
+    }
+    100%{
+        transform: opacity(100%);
+    }
+}
+/* interview */
+
 
 #interview {
     height: 800px;
@@ -351,6 +442,7 @@ header #sub-menu-container a {
     justify-content: center;
     align-items: center;
     height: 20%;
+    position: relative;
 }
 
 #interview .interview-title h1 {
@@ -375,7 +467,7 @@ header #sub-menu-container a {
 
 #interview .interview-container .interview-back {
     height: 100%;
-    width: 100%;
+    width:   100%;
     z-index: -6;
 }
 
@@ -404,6 +496,18 @@ header #sub-menu-container a {
 
 #interview .interview-container .interview-img4 {
     /* background: url('/assets/img/interview/interview4.jpg') center center / cover no-repeat; */
+}
+
+#interview .interview-container .hoverLayer {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 7;
+}
+
+#interview .interview-container .hoverLayer:hover {
+
 }
 
 #interview .interview-container .interview-overlay {
