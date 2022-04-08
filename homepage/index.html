@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/fonts/font-awesome/all.css">
     <script src="../assets/fonts/font-awesome/all.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -58,16 +59,199 @@
     </div>
     
     <div id="history">
-        
+        <div class="department-desc"><h1>History</h1></div>
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 9</div>
+                <img class="img-style" src="../assets/img/slider/slide1.png">
+                <div class="text">Đời 1: Lê Minh Tài</div>
+            </div>
+          
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 9</div>
+                <img class="img-style" src="../assets/img/slider/slide1.png">
+                <div class="text">Đời 2: Lê Đình Huynh</div>
+            </div>
+          
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 9</div>
+                <img class="img-style" src="../assets/img/slider/slide1.png">
+                <div class="text">Đời 3: Luyện Bảo Anh</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 9</div>
+                <img class="img-style" src="../assets/img/slider/slide1.png">
+                <div class="text">Đời 4: Phùng Khắc Thành</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 9</div>
+                <img class="img-style" src="../assets/img/slider/slide1.png">
+                <div class="text">Đời 5: Phạm Oanh</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 9</div>
+                <img class="img-style" src="../assets/img/slider/slide1.png">
+                <div class="text">Đời 6: Từ Khắc Hiếu</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 9</div>
+                <img class="img-style" src="../assets/img/slider/slide1.png">
+                <div class="text">Đời 7: Nguyễn Minh Hiếu</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 9</div>
+                <img class="img-style" src="../assets/img/slider/slide1.png">
+                <div class="text">Đời 8: Khuất Mạnh Hoàng</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 9</div>
+                <img class="img-style" src="../assets/img/slider/slide1.png">
+                <div class="text">Đời 9: Lê Thanh Bình</div>
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+          
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
     </div>
     
     <div id="department">
         <div class="department-desc">
-
+            <h1 class="department-title">Departments</h1>
         </div>
 
         <div class="department-img-list">
-
+            <div class="department-row1">
+                <div class="department-column">
+                    <div class="col1 flex2">
+                        <ul>
+                            <li><h1>BRAINSTORM</h1></li>
+                            <li><h2>Ban nội dung</h2></li>
+                        </ul>
+                    </div>
+                    <div class="col2 flex3">
+                        <ul>
+                            <!-- <li>Dựa trên mô hình Agile - một phương pháp phát triển phần mềm, bước đầu tiên cần làm là Brainstorm. Công việc này đòi hỏi tư duy ý tưởng sáng tạo nhưng cũng phải thật chu đáo, cẩn thận. Không ai khác, Ban Nội dung là những “thủ lĩnh” trong công việc này.</li> -->
+                            <li>Ban Nội dung chính là một phần cấu tạo nên JS với nhiệm vụ lên nội dung, lên ý tưởng, concept cho các sự kiện. Làm việc ở ban Nội dung, bạn còn cần có một tinh thần vô cùng trách nhiệm, kỹ năng làm việc nhóm vì họ thường xuyên phải phối hợp với các phân ban khác để làm nên một chương trình thành công.</li>
+                        </ul>
+                    </div>
+                    <div class="flex1">
+                        <img class="img-style" src="../assets/img/department/department1.png" alt="Ban chuyên môn">
+                    </div>
+                    <div class="flex00"></div>
+                    <div class="flex01"></div>
+                </div>
+            </div>
+            <div class="department-row2">
+                <div class="department-column">
+                    <div class="col2 flex4">
+                        <ul>
+                            <li>Những người được cho là “đầu não”, là những người trực tiếp giám sát và triển khai những thông tin mang tính học thuật cao không ai khác chính là ban Chuyên môn của JS.</li>
+                            <li>Mang trong mình trọng trách giữ gìn giá trị “cốt lõi” của một CLB học thuật, người ban Chuyên môn luôn luôn sáng tạo và đổi mới qua các buổi techtalk, các lớp training hay thậm chí cả những cuộc thi học thuật nữa.</li>
+                            <!-- <li>Trên các sàn đấu học thuật, họ có thể là những chiến binh mạnh mẽ, lạnh lùng. Tuy nhiên, khi về với mái nhà JS, họ là những người anh em nhiệt tình, vui tính. Hơn nữa, những người "thầy cô" này cũng luôn sẵn lòng giúp đỡ các thành viên trong CLB, không chỉ với các vấn đề chuyên môn mà cả kinh nghiệm trong cuộc sống.</li>
+                            <li>Đặc biệt, ban Chuyên môn còn có sự xuất hiện của rất nhiều “bóng hồng” vừa có tài lại vừa có sắc, đem lại những sắc màu đậm chất riêng cho bạn nữa đó!</li> -->
+                        </ul>
+                    </div>
+                    <div class="col1 flex6">
+                        <ul>
+                            <li><h1>DEPLOYMENT</h1></li>
+                            <li><h2>Ban chuyên môn</h2></li>
+                        </ul>
+                    </div>
+                    <div class="flex5">
+                        <img class="img-style" src="../assets/img/department/department1.png" alt="Ban chuyên môn">
+                    </div>
+                    <div class="flex10"></div>
+                    <div class="flex11"></div>
+                </div>
+            </div>
+            <div class="department-row1">
+                <div class="department-column">
+                    <div class="col1 flex1">
+                        <ul>
+                            <li><h1>DEVELOPMENT</h1></li>
+                            <li><h2>Ban văn hóa</h2></li>
+                        </ul>
+                    </div>
+                    <div class="col2 flex2">
+                        <ul>
+                            <li>Một trong những nhân tố góp phần vô cùng to lớn trong quá trình hình thành và phát triển nên JS đó chính là ban Văn hóa. Vì vậy, chẳng phải tự nhiên mà Văn hóa được mệnh danh là “linh hồn” của JS.</li>
+                            <li>Không có cuộc vui nào mà vắng mặt các thành viên phân ban này. Đặc biệt, họ còn là người rất đa tài, đủ các yếu tố cầm - kỳ - thi - họa, hứa hẹn sẽ tiếp lửa và mang đến sự tích cực cho các JSers.</li>
+                            <!-- <li>Nếu bạn nghĩ rằng: “Vào Văn hóa chỉ ăn chơi thôi chứ có làm gì đâu” thì không hề, chúng mình còn học hỏi được rất nhiều điều bổ ích đó! Bật mí nhỏ với bạn, danh hiệu “Cóc vàng” của JS cũng có sự góp mặt đáng kể của người Văn hóa đó nha.</li> -->
+                            
+                        </ul>
+                    </div>
+                    <div class="flex3">
+                        <img class="img-style" src="../assets/img/department/department1.png" alt="Ban chuyên môn">
+                    </div>
+                    <div class="flex00"></div>
+                    <div class="flex01"></div>
+                </div>
+            </div>
+            <div class="department-row2">
+                <div class="department-column">
+                    <div class="col2 flex4">
+                        <ul>
+                            <li>Nắm giữ vai trò tạo nên “giao diện” và hình ảnh chính, ban Truyền thông đang ngày càng khẳng định được tầm quan trọng của mình ở JS.</li>
+                            <li>Vì đặc thù đòi hỏi sự sáng tạo, các thành viên ở ban Truyền thông luôn không ngừng tìm tòi và “liều lĩnh” thử sức với các concept khác nhau.</li>
+                            <!-- <li>Đặc biệt, ban Truyền thông còn có sự góp mặt của rất nhiều các bạn học chuyên ngành khác Công nghệ thông tin - điều làm nên sự đa dạng và chất riêng của ban Truyền thông JS.</li> -->
+                        </ul>   
+                    </div>
+                    <div class="col1 flex6">
+                        <ul>
+                            <li><h1>PICTURE PRODUCTION</h1></li>
+                            <li><h2>Ban Truyền thông</h2></li>
+                        </ul>
+                    </div>
+                    <div class="flex5">
+                        <img class="img-style" src="../assets/img/department/department1.png" alt="Ban chuyên môn">
+                    </div>
+                    <div class="flex10"></div>
+                    <div class="flex11"></div>
+                </div>
+            </div>
+            <div class="department-row1">
+                <div class="department-column">
+                    <div class="col1 flex2">
+                        <ul>
+                            <li><h1>QUALITY ASSURANCE</h1></li>
+                            <li><h2>Ban Đối ngoại</h2></li>
+                        </ul>
+                    </div>
+                    <div class="col2 flex3">
+                        <ul>
+                            <!-- <li>Để đảm bảo được chất lượng các sản phẩm cũng như mối quan hệ của JS, chúng ta phải kể đến công sức vô cùng to lớn của các thành viên ban Đối ngoại.</li> -->
+                            <li>“Khéo léo”, “nhanh nhạy” và “hoạt bát” là những tính từ khi nhắc đến con người của Đối ngoại. Nếu ban Văn hóa là sợi dây gắn kết thành viên trong JS thì Đối ngoại chính là cầu nối JS với các CLB cũng như tổ chức trong và ngoài phạm vi FPT. Chính vì vậy, đây cũng là phân ban hội tụ rất nhiều những gương mặt sáng giá với visual cực đỉnh của JS.</li>
+                        </ul>
+                    </div>
+                    <div class="flex1">
+                        <img class="img-style" src="../assets/img/department/department1.png" alt="Ban chuyên môn">
+                    </div>
+                    <div class="flex00"></div>
+                    <div class="flex01"></div>
+                </div>
+            </div>
         </div>
     </div>
     
