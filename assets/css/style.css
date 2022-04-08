@@ -328,7 +328,6 @@ header #sub-menu-container a {
     font-size: 2.1vw;
     background-color: #fff;
     color: var(--tertiary-text-color);
-    box-shadow: 0 0 16px #000,0 0 32px #000;
     opacity: 0.9;
     line-height: 1.4;
 }
@@ -366,17 +365,16 @@ header #sub-menu-container a {
 }
 
 #activities .pictureLayer {
-    animation: slideMe1 .7s ease-in-out;
-    z-index: -5;
+    
 }
 
-.image__img {
+#activities .image__img {
     display: block;
     z-index: 0;
     
 }
 
-.heading {
+#activities .heading {
     position: absolute;
     font-family: 'Lato', sans-serif;
 	font-weight: bold;	
@@ -387,7 +385,7 @@ header #sub-menu-container a {
     
 }
 
-.content {
+#activities .content {
     position: absolute;
     font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -396,7 +394,7 @@ header #sub-menu-container a {
     z-index: 10;
 }
 
-.transparent-block {
+#activities .transparent-block {
     position: absolute;
     top: 0;
     left: 0;
@@ -412,23 +410,6 @@ header #sub-menu-container a {
     z-index: 10;
 }
 
-@keyframes slideMe1 {
-    0%{
-        transform: translateX(-500px) opacity(0%);
-    }
-    100%{
-        transform: opacity(100%);
-    }
-}
-
-@keyframes slideMe2 {
-    0%{
-        transform: translateX(500px) opacity(0%);
-    }
-    100%{
-        transform: opacity(100%);
-    }
-}
 /* interview */
 
 
