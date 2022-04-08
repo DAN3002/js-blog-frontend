@@ -1,10 +1,10 @@
 Header
     Logo
     Menu
-        ti-home Home
-        ti-time History
-         Department
-         JSC
+        Home
+        History
+        Department
+        JSC
         Activities
         Interview
         Quiz
@@ -22,7 +22,9 @@ JSC*
     description
     img
 Activities
+
 Interview
 
 Quiz
+
 Footer
