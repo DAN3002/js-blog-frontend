@@ -535,6 +535,7 @@ header #sub-menu-container a {
     font-family: 'Lato', sans-serif;
     text-align: center;
     margin-bottom: 30px;
+    margin-top: 40px;
 }
 
 .image-grid {
@@ -558,33 +559,12 @@ header #sub-menu-container a {
 }
 
 #activities .pictureLayer {
-    
+    position: relative;
 }
 
 #activities .image__img {
     display: block;
     z-index: 0;
-    
-}
-
-#activities .heading {
-    position: absolute;
-    font-family: 'Lato', sans-serif;
-	font-weight: bold;	
-    font-size: 35px;
-    text-align: center;
-    margin: 5%;
-    z-index: 10;
-    
-}
-
-#activities .content {
-    position: absolute;
-    font-family: 'Lato', sans-serif;
-	font-weight: 300;
-    font-size: 25px;
-    text-align: center;
-    z-index: 10;
 }
 
 #activities .transparent-block {
@@ -603,6 +583,73 @@ header #sub-menu-container a {
     z-index: 10;
 }
 
+#activities .heading {
+    font-family: 'Lato', sans-serif;
+	font-weight: bold;	
+    font-size: 40px;
+    text-align: center;
+    margin: 3%;
+    z-index: 10;
+    
+}
+
+#activities .content {
+    font-family: 'Lato', sans-serif;
+	font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    margin: 3%;
+    z-index: 10;
+}
+
+
+
+/* animation */
+
+.from-left {
+-webkit-animation: from-left 1.2s ease-in-out;
+}
+
+@-webkit-keyframes from-left {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-70px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+    }
+}
+
+.from-right {
+    -webkit-animation: from-right 1.2s ease-in-out;
+    }
+    
+    @-webkit-keyframes from-right {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateX(70px);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateX(0px);
+        }
+    }
+
+    .from-top {
+        -webkit-animation: from-top 1.2s ease-in-out;
+        }
+        
+        @-webkit-keyframes from-top {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0px);
+            }
+        }
 /* interview */
 
 
