@@ -89,6 +89,7 @@ window.onload=function(){
         if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
             virusIsAppear = true;
             
+            window.scrollTo(0, 0);
             virusAppear();
             hideText();
             changeHomePage();
@@ -97,8 +98,11 @@ window.onload=function(){
     
     
     function virusAppear () {
-        var virus = document.getElementById('virus');
-        virus.style.display = 'block';
+
+        var body = document.body,
+        html = document.documentElement;
+
+        var webHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 
         var bugs = document.querySelectorAll('#virus #bugs .bug');
         var bugs_array = [...bugs];
@@ -108,7 +112,7 @@ window.onload=function(){
         // console.log(bugs_array);
         
         bugs_array.forEach(bug => {
-            bug.style.opacity = 1;
+            bug.style.display = 'block'
             bug.style.left = Math.floor(window.innerWidth / 2) + "px";
             bug.style.top = Math.round(window.innerHeight / 2) + "px";
             var style = window.getComputedStyle(bug);
@@ -126,7 +130,7 @@ window.onload=function(){
                 if (x + parseInt(style.width.replace("px", "")) > window.innerWidth){
                     spx = -spx;
                 }
-                if (y + parseInt(style.height.replace("px", "")) > window.innerHeight){
+                if (y + parseInt(style.height.replace("px", "")) > webHeight){
                     spy = -spy;
                 }
                 if (x < 0){
@@ -148,6 +152,8 @@ window.onload=function(){
             }, 500)
         });
     }
+
+    function 
 
     // Thêm class virus_hideText_list vào những chỗ cần ẩn chữ
     function hideText() {

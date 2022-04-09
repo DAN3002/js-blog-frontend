@@ -757,8 +757,7 @@ footer {
     position: absolute;
     width: 100px;
     height: 100px;
-    opacity: 0;;
-    z-index: 2000;
+    z-index: 999;
 }
 
 #virus .bug img {
