@@ -535,7 +535,7 @@ header #sub-menu-container a {
     font-family: 'Lato', sans-serif;
     text-align: center;
     margin-bottom: 30px;
-    margin-top: 40px;
+    margin-top: 64px;
 }
 
 .image-grid {
@@ -769,21 +769,22 @@ footer {
 
 }
 
-#virus {
+/* #virus {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 2000;
+    
     display: none;
-}
+} */
 
 #virus .bug {
+    display: none;
     position: absolute;
     width: 100px;
     height: 100px;
-    opacity: 0;;
+    z-index: 999;
 }
 
 #virus .bug img {
