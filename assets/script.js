@@ -169,7 +169,6 @@ window.onload=function(){
         });
     }
 
-    function 
 
     // Thêm class virus_hideText_list vào những chỗ cần ẩn chữ
     function hideText() {
