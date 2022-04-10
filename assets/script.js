@@ -78,16 +78,27 @@ window.onload=function(){
     });
     // --------------------
 
-    // Float In Animation
-    var homeSec = document.querySelector('#home .home-sec-container');
-
+    // Float Animation
+    
     window.addEventListener('scroll', function() {
         var value_base = this.window.scrollY;
+
+        var homeSec = document.querySelector('#home .home-sec-container');
         if (value_base > 350) {
             homeSec.style.display = 'flex';
         }
+        
+        var picturesLayer = document.querySelectorAll('#activities .pictureLayer');
+        var picturesLayer_array = [...picturesLayer];
+        if (value_base > 4600) {
+            picturesLayer_array.forEach(pictureLayer => {
+                pictureLayer.style.display = 'block'
+            });
+        }
+        console.log(value_base);
     });
 
+<<<<<<< HEAD
 
     //Activities_animation
     
@@ -105,6 +116,8 @@ window.onload=function(){
 
     observer.observe(document.querySelector(".image-grid"));
 
+=======
+>>>>>>> 90fa4041880095ff45f7fcd1c30e6b42cf566bbd
     // Virus function
     var virusIsAppear = false;
 

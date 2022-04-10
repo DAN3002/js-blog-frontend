@@ -611,6 +611,7 @@ header #sub-menu-container a {
 
 #activities .pictureLayer {
     position: relative;
+    display: none;
 }
 
 #activities .image__img {
