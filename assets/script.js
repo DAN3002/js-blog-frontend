@@ -78,32 +78,25 @@ window.onload=function(){
     });
     // --------------------
 
-    // Home desciption Animation
-    var homeSec = document.querySelector('#home .home-sec-container');
-
+    // Float Animation
+    
     window.addEventListener('scroll', function() {
         var value_base = this.window.scrollY;
+
+        var homeSec = document.querySelector('#home .home-sec-container');
         if (value_base > 350) {
             homeSec.style.display = 'flex';
         }
+        
+        var picturesLayer = document.querySelectorAll('#activities .pictureLayer');
+        var picturesLayer_array = [...picturesLayer];
+        if (value_base > 4600) {
+            picturesLayer_array.forEach(pictureLayer => {
+                pictureLayer.style.display = 'block'
+            });
+        }
+        console.log(value_base);
     });
-
-
-    //Activities_animation
-    
-    const observe = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                document.querySelectorAll(".activity-title")[0].classList.add("from-top")
-                document.querySelectorAll(".pictureLayer")[1].classList.add("from-left")
-                document.querySelectorAll(".pictureLayer")[2].classList.add("from-right")
-                document.querySelectorAll(".pictureLayer")[3].classList.add("from-left")
-                document.querySelectorAll(".pictureLayer")[4].classList.add("from-right")
-            }
-        })
-     })
-
-    observer.observe(document.querySelector(".image-grid"));
 
     // Virus function
     var virusIsAppear = false;
