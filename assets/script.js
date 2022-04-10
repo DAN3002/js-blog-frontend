@@ -78,7 +78,7 @@ window.onload=function(){
     });
     // --------------------
 
-    // Home desciption Animation
+    // Float In Animation
     var homeSec = document.querySelector('#home .home-sec-container');
 
     window.addEventListener('scroll', function() {
