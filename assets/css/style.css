@@ -711,11 +711,11 @@ header #sub-menu-container a {
 }
 
 #interview .interview-container .interview-img3 {
-    /* background: url('/assets/img/interview/interview3.jpg') center center / cover no-repeat; */
+    background: url('/assets/img/interview/interview3.jpg') center center / cover no-repeat;
 }
 
 #interview .interview-container .interview-img4 {
-    /* background: url('/assets/img/interview/interview4.jpg') center center / cover no-repeat; */
+    background: url('/assets/img/interview/interview4.jpg') center center / cover no-repeat;
 }
 
 #interview .interview-container .hoverLayer {
