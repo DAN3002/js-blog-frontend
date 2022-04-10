@@ -305,6 +305,7 @@ header #sub-menu-container a {
 }
 .img-style {
     width: 100%;
+    object-fit: contain;
 }
   
 /* Next & previous buttons */
@@ -403,7 +404,7 @@ header #sub-menu-container a {
 }
 .department-img-list {
     margin: 20px -100px;
-    border: 50px solid rgb(30 41 59);
+    border: 50px solid #000;
     margin-bottom: 0px;
 }
 .department-row1, .department-row2 {
@@ -425,6 +426,7 @@ header #sub-menu-container a {
     padding-right: 16px;
     padding-left: 16px;
 }
+
 .department-column {
     display: flex;
     
@@ -467,15 +469,15 @@ header #sub-menu-container a {
 }
 .flex1, .flex3, .flex5, .flex11, .flex10 {
     width: 20%;
-    background-color: #242582;
+    background-color: #24325b;
     color: #fff;
     /* border-radius: 20px;   */
 }
 
 .flex2, .flex4, .flex6, .flex00, .flex01 {
     width: 20%;
-    background-color: #ccc;
-    color: #242582;
+    background-color: #fff;
+    color: #24325b;
     /* border-radius: 20px; */
 }
 
