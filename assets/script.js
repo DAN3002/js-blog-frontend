@@ -93,40 +93,42 @@ window.onload=function(){
             virusAppear();
             hideText();
             changeHomePage();
+            showFooter ();
         };
     });
+
     
+    function showFooter () {
+        var footer = document.querySelector('footer');
+        footer.style.display = 'flex';
+    }
     
     function virusAppear () {
-
+        
         var body = document.body,
         html = document.documentElement;
-
-        var webHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
-
+        
+        var webHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        
         var bugs = document.querySelectorAll('#virus #bugs .bug');
         var bugs_array = [...bugs];
-        // for (var i = 0; i < 20; i++) {
-        //     bugs_array[i] = [...bugs];
-        // }
-        // console.log(bugs_array);
-        
+            
         bugs_array.forEach(bug => {
             bug.style.display = 'block'
             bug.style.left = Math.floor(window.innerWidth / 2) + "px";
             bug.style.top = Math.round(window.innerHeight / 2) + "px";
             var style = window.getComputedStyle(bug);
-            
+                
             bug.style.transform = "rotate(" + 0 + "deg)"
             var spx = Math.floor(Math.random() * 10);
             var spy = Math.floor(Math.random() * 10);
             var rotateOffset = 1;
-            
+                
             function move(){
                 var rotate = parseInt(bug.style.transform.replace(/[^\d]+/g, ""));
                 var x = parseInt(bug.style.left.replace("px", ""));
                 var y = parseInt(bug.style.top.replace("px", ""));
-            
+                
                 if (x + parseInt(style.width.replace("px", "")) > window.innerWidth){
                     spx = -spx;
                 }
@@ -146,42 +148,69 @@ window.onload=function(){
                 bug.style.left = x + "px";
                 bug.style.top = y + "px"; 
             }
+
             setInterval(move, 10);
             setInterval( () => {
                 rotateOffset = -rotateOffset;
             }, 500)
         });
     }
-
-    function 
-
+    
     // Thêm class virus_hideText_list vào những chỗ cần ẩn chữ
     function hideText() {
         var virus_hideText_list = document.querySelectorAll('.virus_hideText_list');
         
         for (var i = 0; i < virus_hideText_list.length; i++) {
             var virus_hideText = virus_hideText_list[i].innerHTML
-
+            
             var hidedText = virus_hideText.replace(/[b]/g, '🔼');
             var hidedText2 = hidedText.replace(/[ì]/g, '👨🏻‍💼');
             var hidedText3 = hidedText2.replace(/[n]/g, '🔽');
             var hidedText4 = hidedText3.replace(/[h]/g, '🙍🏻‍♂️');
-
+            
             virus_hideText_list[i].innerHTML = hidedText4;
         }
     }
-
+    
     function changeHomePage () {
         var virus_overlay = document.getElementById('virus_overlay');
-
+        
         home_background.src="../assets/img/banner/virus/background.png";
         stars.src="../assets/img/banner/virus/stars.png";
         sun.src="../assets/img/banner/virus/moon.png";
         logo_long.src="../assets/img/banner/virus/logo-long.png";
-
+        
         light.style.display = 'none';
         night_overlay.style.display = 'none';
         virus_overlay.style.opacity = 1;
+    }
+
+    var passwordBtn = document.getElementById('check_password_button');
+    passwordBtn.addEventListener('click', checkPassword);
+    
+    function checkPassword () {
+        var password = document.getElementById('password').value;
+        var passwordResult = document.getElementById('password_result');
+        var correctPassword = 'bình';
+
+        if (password == correctPassword) {
+            passwordResult.innerHTML = 'Correct Password';
+            passwordResult.style.color = 'green';
+            bugs.style.display = 'none';
+        } else {
+            passwordResult.innerHTML = 'Incorrect Password';
+            passwordResult.style.color = 'red';
+            addVirus();
+
+        }
+    }
+
+    function addVirus() {
+        var bugsList = document.getElementById('bugs');
+        var bugsListAdd = bugsList.innerHTML + '<div class="bug"><img src="../assets/img/bug.png" alt=""></div>';
+
+        bugsList.innerHTML = bugsListAdd;
+        virusAppear();
     }
     // --------------------------------
 }

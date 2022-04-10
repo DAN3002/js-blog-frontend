@@ -765,7 +765,7 @@ footer {
 }
 
 footer {
-    display: flex;
+    display: none;
     height: 150px;
     background-color: var(--theme-color);
     justify-content: space-between;
@@ -793,8 +793,11 @@ footer .footer_password h2 {
     margin-bottom: 16px;
 }
 
-footer .footer_password input {
+footer .footer_password .password_input {
     margin-bottom: 12px;
+}
+
+footer .footer_password input {
     padding: 6px 4px;
     font-weight: bold;
     text-align: center;
