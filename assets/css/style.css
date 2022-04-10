@@ -312,8 +312,9 @@ header #sub-menu-container a {
 .mySlides {
     display: none;
 }
-.img-style {
-    width: 100%;
+#history .img-style {
+    width: 505px;
+    height: 505px;
     object-fit: contain;
 }
   
@@ -415,8 +416,8 @@ header #sub-menu-container a {
     font-family: var(--description-font);
 }
 .department-img-list {
-    margin: 20px -100px;
-    border: 50px solid #000;
+    margin: 20px 0;
+    border-top: 50px solid #000;
     margin-bottom: 0px;
 }
 .department-row1, .department-row2 {
@@ -445,16 +446,17 @@ header #sub-menu-container a {
 }
 
 #department .content {
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
     align-items: center;
     display: flex;
-    
+    font-family: var(--description-font);
 }
 
 #department .header {
     font-weight: bold;
     align-items: center;
+    font-family: var(--title-font);
 }
 .col1 {
     display: flex;
@@ -480,14 +482,14 @@ header #sub-menu-container a {
     
 }
 .flex1, .flex3, .flex5, .flex11, .flex10 {
-    width: 20%;
+    width: 25%;
     background-color: #24325b;
     color: #fff;
     /* border-radius: 20px;   */
 }
 
 .flex2, .flex4, .flex6, .flex00, .flex01 {
-    width: 20%;
+    width: 25%;
     background-color: #fff;
     color: #24325b;
     /* border-radius: 20px; */
@@ -504,12 +506,14 @@ header #sub-menu-container a {
 }
 .flex00, .flex10 {
     order: 1;
+    width: 12.5%;
 }
 .flex01, .flex11 {
     order: 5;
+    width: 12.5%;
 }
-.img-style {
-    /* width: 100%; */
+#department .img-style {
+    width: 100%; 
     object-fit: cover;
     object-position: center;
 }
@@ -531,13 +535,12 @@ header #sub-menu-container a {
 #jsc .jsc-title .jsc-title-transparent {
     position: absolute;
     display: flex;
-    top: 25%;
+    top: 0;
     bottom: 0;
     left: 0;
-    text-align: center;
+    text-align: right;
     align-items: center;
-    width: 100%;
-    height:50%;
+    width: 35%;
     padding: 0 2%;
     font-size: 5vw;
     background-color: #fff;
@@ -549,11 +552,10 @@ header #sub-menu-container a {
 #jsc .jsc-title .jsc-title-shadow {
     position: absolute;
     display: flex;
-    top: 25%;
+    top: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 50%;
+    width: 35%;
     padding: 0 20px;
 
 }
@@ -567,7 +569,7 @@ header #sub-menu-container a {
     right: 0;
     text-align: justify;
     justify-content: center;
-    width: 100%;
+    width: 62%;
     padding: 0 5%;
     font-size: 1.8vw;
     background-color: #fff;
@@ -763,11 +765,11 @@ header #sub-menu-container a {
 }
 
 #interview .interview-container .interview-img3 {
-    /* background: url('/assets/img/interview/interview3.jpg') center center / cover no-repeat; */
+    background: url('/assets/img/interview/interview3.jpg') center center / cover no-repeat;
 }
 
 #interview .interview-container .interview-img4 {
-    /* background: url('/assets/img/interview/interview4.jpg') center center / cover no-repeat; */
+    background: url('/assets/img/interview/interview4.jpg') center center / cover no-repeat;
 }
 
 #interview .interview-container .hoverLayer {
