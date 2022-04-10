@@ -284,6 +284,13 @@ header #sub-menu-container a {
 #history {
 
 }
+
+#history .title {
+    margin-top: 40px;
+    font-size: 70px;
+    font-weight: bold;
+    font-family:'Lato', sans-serif;
+}
 /* Slideshow container */
 .slideshow-container {
     /* max-width: 1000px; */
@@ -382,6 +389,13 @@ header #sub-menu-container a {
 #department {
     /* grid-template-rows: auto auto auto auto auto; */
 }
+.department-title {
+    margin-top: 40px;
+    font-size: 70px;
+    font-weight: bold;
+    font-family:'Lato', sans-serif;
+}
+
 .department-desc {
     text-align: center;
     font-size: 40px;
@@ -389,7 +403,8 @@ header #sub-menu-container a {
 }
 .department-img-list {
     margin: 20px -100px;
-    border: 2px solid rgb(30 41 59);
+    border: 50px solid rgb(30 41 59);
+    margin-bottom: 0px;
 }
 .department-row1, .department-row2 {
     display: flex;
@@ -412,11 +427,26 @@ header #sub-menu-container a {
 }
 .department-column {
     display: flex;
+    
+}
+
+#department .content {
+    font-weight: bold;
+    font-size: 18px;
+    align-items: center;
+    display: flex;
+    
+}
+
+#department .header {
+    font-weight: bold;
+    align-items: center;
 }
 .col1 {
     display: flex;
     /* width: 33.3333%; */
     justify-content: center;
+    text-align: center;
     align-items: center;
     height: 100%;
     /* border: 2px solid rgb(30 41 59); */
@@ -428,13 +458,16 @@ header #sub-menu-container a {
     clear: both;
 } */
 .col2 {
+    display: flex;
     float: left;
     padding: 20px 0;
+    text-align: center;
+    justify-content: center;
     
 }
 .flex1, .flex3, .flex5, .flex11, .flex10 {
     width: 20%;
-    background-color: rgb(30 41 59);
+    background-color: #242582;
     color: #fff;
     /* border-radius: 20px;   */
 }
@@ -442,9 +475,10 @@ header #sub-menu-container a {
 .flex2, .flex4, .flex6, .flex00, .flex01 {
     width: 20%;
     background-color: #ccc;
-    color: rgb(30 41 59);
+    color: #242582;
     /* border-radius: 20px; */
 }
+
 .flex1, .flex4 {
     order: 2;
 }
@@ -530,7 +564,7 @@ header #sub-menu-container a {
 }
 
 #activities .activity-title{
-    font-size: 48px;
+    font-size: 70px;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
     text-align: center;
