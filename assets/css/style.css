@@ -312,8 +312,9 @@ header #sub-menu-container a {
 .mySlides {
     display: none;
 }
-.img-style {
-    width: 100%;
+#history .img-style {
+    width: 505px;
+    height: 505px;
     object-fit: contain;
 }
   
@@ -445,16 +446,17 @@ header #sub-menu-container a {
 }
 
 #department .content {
-    font-weight: 400;
-    font-size: 17px;
+    font-weight: 500;
+    font-size: 16px;
     align-items: center;
     display: flex;
-    
+    font-family: var(--description-font);
 }
 
 #department .header {
     font-weight: bold;
     align-items: center;
+    font-family: var(--title-font);
 }
 .col1 {
     display: flex;
@@ -510,8 +512,8 @@ header #sub-menu-container a {
     order: 5;
     width: 12.5%;
 }
-.img-style {
-    /* width: 100%; */
+#department .img-style {
+    width: 100%; 
     object-fit: cover;
     object-position: center;
 }
