@@ -91,19 +91,19 @@ window.onload=function(){
 
     //Activities_animation
     
-    // const observe = new IntersectionObserver(entries => {
-    //     entries.forEach(entry => {
-    //         if(entry.isIntersecting){
-    //             document.querySelectorAll(".activity-title")[0].classList.add("from-top")
-    //             document.querySelectorAll(".pictureLayer")[1].classList.add("from-left")
-    //             document.querySelectorAll(".pictureLayer")[2].classList.add("from-right")
-    //             document.querySelectorAll(".pictureLayer")[3].classList.add("from-left")
-    //             document.querySelectorAll(".pictureLayer")[4].classList.add("from-right")
-    //         }
-    //     })
-    // })
+    const observe = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                document.querySelectorAll(".activity-title")[0].classList.add("from-top")
+                document.querySelectorAll(".pictureLayer")[1].classList.add("from-left")
+                document.querySelectorAll(".pictureLayer")[2].classList.add("from-right")
+                document.querySelectorAll(".pictureLayer")[3].classList.add("from-left")
+                document.querySelectorAll(".pictureLayer")[4].classList.add("from-right")
+            }
+        })
+     })
 
-    // observer.observe(document.querySelector(".image-grid"));
+    observer.observe(document.querySelector(".image-grid"));
 
     // Virus function
     var virusIsAppear = false;
