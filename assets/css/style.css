@@ -580,6 +580,11 @@ header #sub-menu-container a {
     display: flex;
 }
 
+#activities {
+    height: 1114px;
+    margin-bottom: 50px;
+}
+
 #activities .activity-title{
     font-size: 70px;
     font-weight: bold;
@@ -707,6 +712,7 @@ header #sub-menu-container a {
 
 #interview {
     height: 800px;
+    margin-top: 50px;
 }
 
 #interview .interview-title {

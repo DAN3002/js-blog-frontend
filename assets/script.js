@@ -98,26 +98,6 @@ window.onload=function(){
         console.log(value_base);
     });
 
-<<<<<<< HEAD
-
-    //Activities_animation
-    
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                document.querySelectorAll(".activity-title")[0].classList.add("from-top");
-                document.querySelectorAll(".pictureLayer")[1].classList.add("from-left");
-                document.querySelectorAll(".pictureLayer")[2].classList.add("from-right");
-                document.querySelectorAll(".pictureLayer")[3].classList.add("from-left");
-                document.querySelectorAll(".pictureLayer")[4].classList.add("from-right");
-            }
-        })
-     })
-
-    observer.observe(document.querySelector(".image-grid"));
-
-=======
->>>>>>> 90fa4041880095ff45f7fcd1c30e6b42cf566bbd
     // Virus function
     var virusIsAppear = false;
 
