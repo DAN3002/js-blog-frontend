@@ -1,6 +1,7 @@
 window.onload=function(){
 
     // HomePage Parallax function
+
     var home_background = document.getElementById('home_background');
     var logo_long = document.getElementById('logo_long');
     var sun = document.getElementById('sun');
@@ -77,6 +78,22 @@ window.onload=function(){
             subMenu.classList.remove('show')
         }, 200); 
     }
+
+    //Activities_animation
+    
+    // const observe = new IntersectionObserver(entries => {
+    //     entries.forEach(entry => {
+    //         if(entry.isIntersecting){
+    //             document.querySelectorAll(".activity-title")[0].classList.add("from-top")
+    //             document.querySelectorAll(".pictureLayer")[1].classList.add("from-left")
+    //             document.querySelectorAll(".pictureLayer")[2].classList.add("from-right")
+    //             document.querySelectorAll(".pictureLayer")[3].classList.add("from-left")
+    //             document.querySelectorAll(".pictureLayer")[4].classList.add("from-right")
+    //         }
+    //     })
+    // })
+
+    // observer.observe(document.querySelector(".image-grid"));
 
     // Virus function
 
@@ -155,7 +172,7 @@ window.onload=function(){
             }, 500)
         });
     }
-    
+
     // Thêm class virus_hideText_list vào những chỗ cần ẩn chữ
     function hideText() {
         var virus_hideText_list = document.querySelectorAll('.virus_hideText_list');

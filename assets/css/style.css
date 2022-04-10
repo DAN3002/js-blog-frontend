@@ -521,7 +521,6 @@ header #sub-menu-container a {
     font-size: 1.8vw;
     background-color: #fff;
     color: var(--tertiary-text-color);
-    box-shadow: 0 0 16px #000,0 0 32px #000;
     opacity: 0.9;
     line-height: 1.4;
 }
@@ -560,37 +559,15 @@ header #sub-menu-container a {
 }
 
 #activities .pictureLayer {
-    animation: slideMe1 .7s ease-in-out;
-    z-index: -5;
+    position: relative;
 }
 
-.image__img {
+#activities .image__img {
     display: block;
     z-index: 0;
-    
 }
 
-.heading {
-    position: absolute;
-    font-family: 'Lato', sans-serif;
-	font-weight: bold;	
-    font-size: 35px;
-    text-align: center;
-    margin: 5%;
-    z-index: 10;
-    
-}
-
-.content {
-    position: absolute;
-    font-family: 'Lato', sans-serif;
-	font-weight: 300;
-    font-size: 25px;
-    text-align: center;
-    z-index: 10;
-}
-
-.transparent-block {
+#activities .transparent-block {
     position: absolute;
     top: 0;
     left: 0;
@@ -606,23 +583,73 @@ header #sub-menu-container a {
     z-index: 10;
 }
 
-@keyframes slideMe1 {
-    0%{
-        transform: translateX(-500px) opacity(0%);
+#activities .heading {
+    font-family: 'Lato', sans-serif;
+	font-weight: bold;	
+    font-size: 40px;
+    text-align: center;
+    margin: 3%;
+    z-index: 10;
+    
+}
+
+#activities .content {
+    font-family: 'Lato', sans-serif;
+	font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    margin: 3%;
+    z-index: 10;
+}
+
+
+
+/* animation */
+
+.from-left {
+-webkit-animation: from-left 1.2s ease-in-out;
+}
+
+@-webkit-keyframes from-left {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-70px);
     }
-    100%{
-        transform: opacity(100%);
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
     }
 }
 
-@keyframes slideMe2 {
-    0%{
-        transform: translateX(500px) opacity(0%);
+.from-right {
+    -webkit-animation: from-right 1.2s ease-in-out;
     }
-    100%{
-        transform: opacity(100%);
+    
+    @-webkit-keyframes from-right {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateX(70px);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateX(0px);
+        }
     }
-}
+
+    .from-top {
+        -webkit-animation: from-top 1.2s ease-in-out;
+        }
+        
+        @-webkit-keyframes from-top {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0px);
+            }
+        }
 /* interview */
 
 
@@ -741,16 +768,6 @@ header #sub-menu-container a {
 footer {
 
 }
-
-/* #virus {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    
-    display: none;
-} */
 
 #virus .bug {
     display: none;
