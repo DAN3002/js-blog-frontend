@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/fonts/font-awesome/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
     <script src="../assets/fonts/font-awesome/all.js"></script>
     <script src="../assets/script.js"></script>
     <script src="script.js"></script>
@@ -56,19 +59,21 @@
             <img src="../assets/img/banner/logo-long.png" id="logo_long" alt="">
         </div>
         <div class="home-sec" id="home-sec">
-            <div class="home-sec-text">
-                <h2 class="home-sec-title">About JS Club</h2>
-                <p class="home-sec-desc virus_hideText_list">JS Club là tên viết tắt của Japanese Software Engineers Club – Câu lạc bộ Kỹ sư phần mềm Nhật Bản được thành lập vào tháng 02/2014. 
-                    Từ những ngày đầu thành lập, JS mang sứ mạng trở thành một cộng đồng kết nối các sinh viên theo chuyên ngành hẹp JS nói riêng và toàn thể các bạn sinh viên nói chung.</p>
-            </div>
+            <div class="home-sec-container">
+                <div class="home-sec-text">
+                    <h2 class="home-sec-title">About JS Club</h2>
+                    <p class="home-sec-desc virus_hideText_list">JS Club là tên viết tắt của Japanese Software Engineers Club – Câu lạc bộ Kỹ sư phần mềm Nhật Bản được thành lập vào tháng 02/2014. 
+                        Từ những ngày đầu thành lập, JS mang sứ mạng trở thành một cộng đồng kết nối các sinh viên theo chuyên ngành hẹp JS nói riêng và toàn thể các bạn sinh viên nói chung.</p>
+                </div>
                 <div class="jsc_img">
                     <img src="../assets/img/jsc_img.png" alt="">
                 </div>
+            </div>
         </div>
     </div>
     
     <div id="history">
-        <div class="department-desc"><h1>History</h1></div>
+        <div class="department-desc"><h1 class="title">History</h1></div>
         <div class="slideshow-container">
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
@@ -155,14 +160,14 @@
                 <div class="department-column">
                     <div class="col1 flex2">
                         <ul>
-                            <li><h1>BRAINSTORM</h1></li>
-                            <li><h2>Ban nội dung</h2></li>
+                            <li><h1 class="header">BRAINSTORM</h1></li>
+                            <li><h2 class="header">Ban nội dung</h2></li>
                         </ul>
                     </div>
                     <div class="col2 flex3">
                         <ul>
                             <!-- <li>Dựa trên mô hình Agile - một phương pháp phát triển phần mềm, bước đầu tiên cần làm là Brainstorm. Công việc này đòi hỏi tư duy ý tưởng sáng tạo nhưng cũng phải thật chu đáo, cẩn thận. Không ai khác, Ban Nội dung là những “thủ lĩnh” trong công việc này.</li> -->
-                            <li>Với nhiệm vụ lên "còn ten" sự kiện và phối hợp với các phân ban khác để tạo nên những hoạt động chất lượng, thành viên ban Nội dung mang trong mình tinh thần trách nhiệm, kỹ năng làm việc nhóm và ti tỉ yếu tố khác nữa không tiện nói ở đây.</li>
+                            <li class="content">Ban Nội dung chính là một phần cấu tạo nên JS với nhiệm vụ lên nội dung, lên ý tưởng, concept cho các sự kiện. Làm việc ở ban Nội dung, bạn còn cần có một tinh thần vô cùng trách nhiệm, kỹ năng làm việc nhóm vì họ thường xuyên phải phối hợp với các phân ban khác để làm nên một chương trình thành công.</li>
                         </ul>
                     </div>
                     <div class="flex1">
@@ -176,16 +181,16 @@
                 <div class="department-column">
                     <div class="col2 flex4">
                         <ul>
-                            <li>Gồm những khối óc nhạy bén với vai trò triển khai các nội dung học thuật đặc thù.</li>
-                            <li>Gánh trên vai trọng trách giữ gìn cái "chất" của một CLB học thuật, người ban Chuyên môn không ngừng học hỏi và đổi mới, họ cống hiến cho CLB qua các buổi techtalk, các lớp training,  thậm chí cả những cuộc thi lập trình.</li>
+                            <li class="content">Những người được cho là “đầu não”, là những người trực tiếp giám sát và triển khai những thông tin mang tính học thuật cao không ai khác chính là ban Chuyên môn của JS.</li>
+                            <li class="content">Mang trong mình trọng trách giữ gìn giá trị “cốt lõi” của một CLB học thuật, người ban Chuyên môn luôn luôn sáng tạo và đổi mới qua các buổi techtalk, các lớp training hay thậm chí cả những cuộc thi học thuật nữa.</li>
                             <!-- <li>Trên các sàn đấu học thuật, họ có thể là những chiến binh mạnh mẽ, lạnh lùng. Tuy nhiên, khi về với mái nhà JS, họ là những người anh em nhiệt tình, vui tính. Hơn nữa, những người "thầy cô" này cũng luôn sẵn lòng giúp đỡ các thành viên trong CLB, không chỉ với các vấn đề chuyên môn mà cả kinh nghiệm trong cuộc sống.</li>
                             <li>Đặc biệt, ban Chuyên môn còn có sự xuất hiện của rất nhiều “bóng hồng” vừa có tài lại vừa có sắc, đem lại những sắc màu đậm chất riêng cho bạn nữa đó!</li> -->
                         </ul>
                     </div>
                     <div class="col1 flex6">
                         <ul>
-                            <li><h1>DEPLOYMENT</h1></li>
-                            <li><h2>Ban chuyên môn</h2></li>
+                            <li><h1 class="header">DEPLOYMENT</h1></li>
+                            <li><h2 class="header">Ban chuyên môn</h2></li>
                         </ul>
                     </div>
                     <div class="flex5">
@@ -199,14 +204,14 @@
                 <div class="department-column">
                     <div class="col1 flex1">
                         <ul>
-                            <li><h1>DEVELOPMENT</h1></li>
-                            <li><h2>Ban văn hóa</h2></li>
+                            <li><h1 class="header">DEVELOPMENT</h1></li>
+                            <li><h2 class="header">Ban văn hóa</h2></li>
                         </ul>
                     </div>
                     <div class="col2 flex2">
                         <ul>
-                            <li>Được mệnh danh là “linh hồn” của JS - những người làm bạn "dính" CLB thông qua những hoạt động bonding bánh cuốn</li>
-                            <li>Không có cuộc vui nào mà vắng mặt đội này. Họ đa tài, cầm - kỳ - thi - họa có đủ, hứa hẹn sẽ tiếp lửa và truyền năng lượng tích cực đến các JSers.</li>
+                            <li class="content">Một trong những nhân tố góp phần vô cùng to lớn trong quá trình hình thành và phát triển nên JS đó chính là ban Văn hóa. Vì vậy, chẳng phải tự nhiên mà Văn hóa được mệnh danh là “linh hồn” của JS.</li>
+                            <li class="content">Không có cuộc vui nào mà vắng mặt các thành viên phân ban này. Đặc biệt, họ còn là người rất đa tài, đủ các yếu tố cầm - kỳ - thi - họa, hứa hẹn sẽ tiếp lửa và mang đến sự tích cực cho các JSers.</li>
                             <!-- <li>Nếu bạn nghĩ rằng: “Vào Văn hóa chỉ ăn chơi thôi chứ có làm gì đâu” thì không hề, chúng mình còn học hỏi được rất nhiều điều bổ ích đó! Bật mí nhỏ với bạn, danh hiệu “Cóc vàng” của JS cũng có sự góp mặt đáng kể của người Văn hóa đó nha.</li> -->
                             
                         </ul>
@@ -222,15 +227,15 @@
                 <div class="department-column">
                     <div class="col2 flex4">
                         <ul>
-                            <li>Là phân ban chăm chút cho “giao diện” CLB, ban Truyền thông đang ngày càng khẳng định được tầm quan trọng của mình ở JS.</li>
-                            <li>Truyền thông đòi hỏi sáng tạo, nên công việc của ban này thực chất là hành trình tìm tòi và không ngừng nghỉ.</li>
+                            <li class="content">Nắm giữ vai trò tạo nên “giao diện” và hình ảnh chính, ban Truyền thông đang ngày càng khẳng định được tầm quan trọng của mình ở JS.</li>
+                            <li class="content">Vì đặc thù đòi hỏi sự sáng tạo, các thành viên ở ban Truyền thông luôn không ngừng tìm tòi và “liều lĩnh” thử sức với các concept khác nhau.</li>
                             <!-- <li>Đặc biệt, ban Truyền thông còn có sự góp mặt của rất nhiều các bạn học chuyên ngành khác Công nghệ thông tin - điều làm nên sự đa dạng và chất riêng của ban Truyền thông JS.</li> -->
                         </ul>   
                     </div>
                     <div class="col1 flex6">
                         <ul>
-                            <li><h1>PICTURE PRODUCTION</h1></li>
-                            <li><h2>Ban Truyền thông</h2></li>
+                            <li><h1 class="header">PICTURE PRODUCTION</h1></li>
+                            <li><h2 class="header">Ban Truyền thông</h2></li>
                         </ul>
                     </div>
                     <div class="flex5">
@@ -244,14 +249,14 @@
                 <div class="department-column">
                     <div class="col1 flex2">
                         <ul>
-                            <li><h1>QUALITY ASSURANCE</h1></li>
-                            <li><h2>Ban Đối ngoại</h2></li>
+                            <li><h1 class="header">QUALITY ASSURANCE</h1></li>
+                            <li><h2 class="header">Ban Đối ngoại</h2></li>
                         </ul>
                     </div>
                     <div class="col2 flex3">
                         <ul>
                             <!-- <li>Để đảm bảo được chất lượng các sản phẩm cũng như mối quan hệ của JS, chúng ta phải kể đến công sức vô cùng to lớn của các thành viên ban Đối ngoại.</li> -->
-                            <li>Là chiếc cầu nối vương quốc JS với thế giới bên ngoài, trực tiếp làm việc với các tổ chức trong và ngoài F-Universe. Người Đối ngoại nói ngắn gọn lại thì 3 phần visual, 7 phần tài năng và khéo léo.</li>
+                            <li class="content">“Khéo léo”, “nhanh nhạy” và “hoạt bát” là những tính từ khi nhắc đến con người của Đối ngoại. Nếu ban Văn hóa là sợi dây gắn kết thành viên trong JS thì Đối ngoại chính là cầu nối JS với các CLB cũng như tổ chức trong và ngoài phạm vi FPT. Chính vì vậy, đây cũng là phân ban hội tụ rất nhiều những gương mặt sáng giá với visual cực đỉnh của JS.</li>
                         </ul>
                     </div>
                     <div class="flex1">
@@ -293,7 +298,7 @@
     </div>
 
     <div id="activities">
-        <h1 class="activity-title from-top">Hoạt động</h1>
+        <h1 class="activity-title from-top">Activities</h1>
         <div class="image-grid">
             <div class="pictureLayer from-left">
                 <img class="image__img" src="/assets/img/activities/jsc.jpg" alt="">

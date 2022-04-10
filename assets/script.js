@@ -1,7 +1,32 @@
 window.onload=function(){
+    // Hamburger Menu function
+    var menuBtn = document.getElementById('menu-btn');
+    var closeBtn = document.getElementById('close-menu-btn');
+    var subMenu = document.getElementById('sub-menu');
+    var subMenuContainer = document.getElementById('sub-menu-container');
+    
+    menuBtn.addEventListener('click', showMenu)
+
+    closeBtn.addEventListener('click', closeMenu)
+
+    subMenu.addEventListener('click', closeMenu)
+
+    subMenuContainer.addEventListener('click', function (event) {
+        event.stopPropagation()
+    })
+
+    function showMenu() {
+        subMenu.classList.add('show')
+    }
+    
+    function closeMenu() {
+        setTimeout(function(){
+            subMenu.classList.remove('show')
+        }, 200); 
+    }
+    // -------------------
 
     // HomePage Parallax function
-
     var home_background = document.getElementById('home_background');
     var logo_long = document.getElementById('logo_long');
     var sun = document.getElementById('sun');
@@ -50,55 +75,33 @@ window.onload=function(){
         gate.style.width = currentGateWidth + value * 0.7 + 'px';
         left_far_rock.style.width = currentLeftFarRockWidth + value * 0.7 + 'px';
         right_far_rock.style.width = currentRightFarRockWidth + value * 0.7 + 'px';
-    })
+    });
     // --------------------
 
-    // Hamburger Menu function
-    var menuBtn = document.getElementById('menu-btn');
-    var closeBtn = document.getElementById('close-menu-btn');
-    var subMenu = document.getElementById('sub-menu');
-    var subMenuContainer = document.getElementById('sub-menu-container');
+    // Float Animation
     
-    menuBtn.addEventListener('click', showMenu)
+    window.addEventListener('scroll', function() {
+        var value_base = this.window.scrollY;
 
-    closeBtn.addEventListener('click', closeMenu)
-
-    subMenu.addEventListener('click', closeMenu)
-
-    subMenuContainer.addEventListener('click', function (event) {
-        event.stopPropagation()
-    })
-
-    function showMenu() {
-        subMenu.classList.add('show')
-    }
-    
-    function closeMenu() {
-        setTimeout(function(){
-            subMenu.classList.remove('show')
-        }, 200); 
-    }
-
-    //Activities_animation
-    
-    // const observe = new IntersectionObserver(entries => {
-    //     entries.forEach(entry => {
-    //         if(entry.isIntersecting){
-    //             document.querySelectorAll(".activity-title")[0].classList.add("from-top")
-    //             document.querySelectorAll(".pictureLayer")[1].classList.add("from-left")
-    //             document.querySelectorAll(".pictureLayer")[2].classList.add("from-right")
-    //             document.querySelectorAll(".pictureLayer")[3].classList.add("from-left")
-    //             document.querySelectorAll(".pictureLayer")[4].classList.add("from-right")
-    //         }
-    //     })
-    // })
-
-    // observer.observe(document.querySelector(".image-grid"));
+        var homeSec = document.querySelector('#home .home-sec-container');
+        if (value_base > 350) {
+            homeSec.style.display = 'flex';
+        }
+        
+        var picturesLayer = document.querySelectorAll('#activities .pictureLayer');
+        var picturesLayer_array = [...picturesLayer];
+        if (value_base > 4600) {
+            picturesLayer_array.forEach(pictureLayer => {
+                pictureLayer.style.display = 'block'
+            });
+        }
+        console.log(value_base);
+    });
 
     // Virus function
-
     var virusIsAppear = false;
 
+    // Bottom scroll
     window.addEventListener('scroll', function() {
         const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
         const scrolled = window.scrollY;

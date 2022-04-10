@@ -6,7 +6,6 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 
@@ -17,6 +16,9 @@ html {
     --primary-text-color: #000;
     --secondary-text-color: #fff;
     --tertiary-text-color: rgb(255, 27, 114);
+
+    --title-font: 'Roboto', sans-serif;
+    --description-font: 'Montserrat', sans-serif;
 }
 
 .primary-bg-color {
@@ -116,6 +118,7 @@ header #sub-menu-container li {
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
     /* line-height: 56px; */
     font-size: 24px;
+    font-family: var(--description-font);
 }
 
 header #sub-menu-container .sub-menu-child:hover {
@@ -140,13 +143,13 @@ header #sub-menu-container a {
         transform: translateX(800px);
     }
     to {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
 @keyframes subMenuFadeOut {
     from {
-        transform: translateY(0);
+        transform: translateX(0);
     }
     to {
         transform: translateX(800px);
@@ -199,18 +202,6 @@ header #sub-menu-container a {
     opacity: 0;
 }
 
-#home .home-desc {
-    display: none;
-    position: absolute;
-    text-align: justify;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 32px;
-    padding: 0 200px;
-    color: var(--secondary-text-color);
-    text-shadow: 0 0 5px rgba(0, 0, 0, 1);
-    line-height: 1.6;
-}
 #home .home-bg #home_background {
     top: 0;
     height: 80%;
@@ -240,11 +231,16 @@ header #sub-menu-container a {
 
 #home .home-sec {
     position: relative;
+    height: 700px;
     padding: 100px;
     background-color: var(--theme-color);
-    display: flex;
+}
+
+#home .home-sec-container {
+    display: none;
     justify-content: space-between;
     align-items: center;
+    animation: homeSecFloatIn ease 1s;
 }
 
 #home .home-sec .jsc_img {
@@ -271,6 +267,7 @@ header #sub-menu-container a {
     margin-bottom: 10px;
     color: #fff;
     text-align: right;
+    font-family: var(--title-font);
 }
 
 #home .home-sec p {
@@ -278,11 +275,30 @@ header #sub-menu-container a {
     line-height: 1.5;
     color: #fff;
     text-align: right;
+    font-family: var(--description-font);
+}
+
+@keyframes homeSecFloatIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /*----------------HISTORY------------------*/
 #history {
 
+}
+
+#history .title {
+    margin-top: 40px;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: var(--title-font);
 }
 /* Slideshow container */
 .slideshow-container {
@@ -298,6 +314,7 @@ header #sub-menu-container a {
 }
 .img-style {
     width: 100%;
+    object-fit: contain;
 }
   
 /* Next & previous buttons */
@@ -339,6 +356,7 @@ header #sub-menu-container a {
     bottom: 4px;
     width: 100%;
     text-align: center;
+    font-family: var(--description-font);
 }
   
 /* Number text (1/3 etc) */
@@ -349,6 +367,7 @@ header #sub-menu-container a {
     padding: 8px 12px;
     position: absolute;
     top: 0;
+    font-family: var(--description-font);
 }
   
 /* The dots/bullets/indicators */
@@ -382,14 +401,23 @@ header #sub-menu-container a {
 #department {
     /* grid-template-rows: auto auto auto auto auto; */
 }
+.department-title {
+    margin-top: 40px;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: var(--title-font);
+}
+
 .department-desc {
     text-align: center;
     font-size: 40px;
     padding-bottom: 20px;
+    font-family: var(--description-font);
 }
 .department-img-list {
     margin: 20px -100px;
-    border: 2px solid rgb(30 41 59);
+    border: 50px solid #000;
+    margin-bottom: 0px;
 }
 .department-row1, .department-row2 {
     display: flex;
@@ -410,13 +438,29 @@ header #sub-menu-container a {
     padding-right: 16px;
     padding-left: 16px;
 }
+
 .department-column {
     display: flex;
+    
+}
+
+#department .content {
+    font-weight: bold;
+    font-size: 18px;
+    align-items: center;
+    display: flex;
+    
+}
+
+#department .header {
+    font-weight: bold;
+    align-items: center;
 }
 .col1 {
     display: flex;
     /* width: 33.3333%; */
     justify-content: center;
+    text-align: center;
     align-items: center;
     height: 100%;
     /* border: 2px solid rgb(30 41 59); */
@@ -428,23 +472,27 @@ header #sub-menu-container a {
     clear: both;
 } */
 .col2 {
+    display: flex;
     float: left;
     padding: 20px 0;
+    text-align: center;
+    justify-content: center;
     
 }
 .flex1, .flex3, .flex5, .flex11, .flex10 {
     width: 20%;
-    background-color: rgb(30 41 59);
+    background-color: #24325b;
     color: #fff;
     /* border-radius: 20px;   */
 }
 
 .flex2, .flex4, .flex6, .flex00, .flex01 {
     width: 20%;
-    background-color: #ccc;
-    color: rgb(30 41 59);
+    background-color: #fff;
+    color: #24325b;
     /* border-radius: 20px; */
 }
+
 .flex1, .flex4 {
     order: 2;
 }
@@ -461,8 +509,9 @@ header #sub-menu-container a {
     order: 5;
 }
 .img-style {
-    width: 100%;
-    /* border-radius: 20px; */
+    /* width: 100%; */
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -482,12 +531,13 @@ header #sub-menu-container a {
 #jsc .jsc-title .jsc-title-transparent {
     position: absolute;
     display: flex;
-    top: 0;
+    top: 25%;
     bottom: 0;
     left: 0;
-    text-align: right;
+    text-align: center;
     align-items: center;
-    width: 35%;
+    width: 100%;
+    height:50%;
     padding: 0 2%;
     font-size: 5vw;
     background-color: #fff;
@@ -499,10 +549,11 @@ header #sub-menu-container a {
 #jsc .jsc-title .jsc-title-shadow {
     position: absolute;
     display: flex;
-    top: 0;
+    top: 25%;
     bottom: 0;
     left: 0;
-    width: 35%;
+    width: 100%;
+    height: 50%;
     padding: 0 20px;
 
 }
@@ -516,7 +567,7 @@ header #sub-menu-container a {
     right: 0;
     text-align: justify;
     justify-content: center;
-    width: 62%;
+    width: 100%;
     padding: 0 5%;
     font-size: 1.8vw;
     background-color: #fff;
@@ -530,7 +581,7 @@ header #sub-menu-container a {
 }
 
 #activities .activity-title{
-    font-size: 48px;
+    font-size: 70px;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
     text-align: center;
@@ -560,6 +611,7 @@ header #sub-menu-container a {
 
 #activities .pictureLayer {
     position: relative;
+    display: none;
 }
 
 #activities .image__img {
