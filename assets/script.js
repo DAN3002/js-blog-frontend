@@ -1,7 +1,32 @@
 window.onload=function(){
+    // Hamburger Menu function
+    var menuBtn = document.getElementById('menu-btn');
+    var closeBtn = document.getElementById('close-menu-btn');
+    var subMenu = document.getElementById('sub-menu');
+    var subMenuContainer = document.getElementById('sub-menu-container');
+    
+    menuBtn.addEventListener('click', showMenu)
+
+    closeBtn.addEventListener('click', closeMenu)
+
+    subMenu.addEventListener('click', closeMenu)
+
+    subMenuContainer.addEventListener('click', function (event) {
+        event.stopPropagation()
+    })
+
+    function showMenu() {
+        subMenu.classList.add('show')
+    }
+    
+    function closeMenu() {
+        setTimeout(function(){
+            subMenu.classList.remove('show')
+        }, 200); 
+    }
+    // -------------------
 
     // HomePage Parallax function
-
     var home_background = document.getElementById('home_background');
     var logo_long = document.getElementById('logo_long');
     var sun = document.getElementById('sun');
@@ -50,34 +75,19 @@ window.onload=function(){
         gate.style.width = currentGateWidth + value * 0.7 + 'px';
         left_far_rock.style.width = currentLeftFarRockWidth + value * 0.7 + 'px';
         right_far_rock.style.width = currentRightFarRockWidth + value * 0.7 + 'px';
-    })
+    });
     // --------------------
 
-    // Hamburger Menu function
-    var menuBtn = document.getElementById('menu-btn');
-    var closeBtn = document.getElementById('close-menu-btn');
-    var subMenu = document.getElementById('sub-menu');
-    var subMenuContainer = document.getElementById('sub-menu-container');
-    
-    menuBtn.addEventListener('click', showMenu)
+    // Home desciption Animation
+    var homeSec = document.querySelector('#home .home-sec-container');
 
-    closeBtn.addEventListener('click', closeMenu)
+    window.addEventListener('scroll', function() {
+        var value_base = this.window.scrollY;
+        if (value_base > 350) {
+            homeSec.style.display = 'flex';
+        }
+    });
 
-    subMenu.addEventListener('click', closeMenu)
-
-    subMenuContainer.addEventListener('click', function (event) {
-        event.stopPropagation()
-    })
-
-    function showMenu() {
-        subMenu.classList.add('show')
-    }
-    
-    function closeMenu() {
-        setTimeout(function(){
-            subMenu.classList.remove('show')
-        }, 200); 
-    }
 
     //Activities_animation
     
@@ -96,9 +106,9 @@ window.onload=function(){
     observer.observe(document.querySelector(".image-grid"));
 
     // Virus function
-
     var virusIsAppear = false;
 
+    // Bottom scroll
     window.addEventListener('scroll', function() {
         const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
         const scrolled = window.scrollY;
