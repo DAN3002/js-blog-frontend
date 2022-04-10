@@ -1,85 +1,91 @@
 window.onload=function(){
+
     // Hamburger Menu function
-    var menuBtn = document.getElementById('menu-btn');
-    var closeBtn = document.getElementById('close-menu-btn');
-    var subMenu = document.getElementById('sub-menu');
-    var subMenuContainer = document.getElementById('sub-menu-container');
+    hamburgerMenu();
+    function hamburgerMenu() {
+        var menuBtn = document.getElementById('menu-btn');
+        var closeBtn = document.getElementById('close-menu-btn');
+        var subMenu = document.getElementById('sub-menu');
+        var subMenuContainer = document.getElementById('sub-menu-container');
+        
+        menuBtn.addEventListener('click', showMenu)
     
-    menuBtn.addEventListener('click', showMenu)
-
-    closeBtn.addEventListener('click', closeMenu)
-
-    subMenu.addEventListener('click', closeMenu)
-
-    subMenuContainer.addEventListener('click', function (event) {
-        event.stopPropagation()
-    })
-
-    function showMenu() {
-        subMenu.classList.add('show')
-    }
+        closeBtn.addEventListener('click', closeMenu)
     
-    function closeMenu() {
-        setTimeout(function(){
-            subMenu.classList.remove('show')
-        }, 200); 
-    }
+        subMenu.addEventListener('click', closeMenu)
+    
+        subMenuContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    
+        function showMenu() {
+            subMenu.classList.add('show')
+        }
+        
+        function closeMenu() {
+            setTimeout(function(){
+                subMenu.classList.remove('show')
+            }, 200); 
+        }
+    };
     // -------------------
 
     // HomePage Parallax function
-    var home_background = document.getElementById('home_background');
-    var logo_long = document.getElementById('logo_long');
-    var sun = document.getElementById('sun');
-    var light = document.getElementById('light');
-    var lake = document.getElementById('lake');
-    var gate = document.getElementById('gate');
-    var stars = document.getElementById('stars');
-    var cloud = document.getElementById('cloud');
-    var left_near_rock = document.getElementById('left_near_rock');
-    var right_near_rock = document.getElementById('right_near_rock');
-    var left_far_rock = document.getElementById('left_far_rock');
-    var right_far_rock = document.getElementById('right_far_rock');
-    var night_overlay = document.getElementById('night_overlay');
-
-    var currentCloudWidth = cloud.clientWidth;
-    var currentLakeWidth = lake.clientWidth;
-    var currentGateWidth = gate.clientWidth;
-    var currentLeftFarRockWidth = left_far_rock.clientWidth;
-    var currentRightFarRockWidth = right_far_rock.clientWidth;
-
-    var homeScrollLimit = 475;
-
-
-    window.addEventListener('scroll', function() {
-        var value_base = this.window.scrollY;
-        if  (value_base < homeScrollLimit) {
-            var value = value_base;
-        } else {
-            value = homeScrollLimit;
-        }
-
-        logo_long.style.opacity = 1 - value * 0.0065;
-        home_background.style.top = value + 'px';
-        sun.style.top = value * 0.25 + 'px';
-        light.style.top = value * 0.25 + 'px';
-        sun.style.opacity = 1 - value * 0.001;
-        light.style.opacity = 1 - value * 0.0025;
-        night_overlay.style.opacity = value * 0.0025;
-        stars.style.top = value * 0.75 + 'px';
-        stars.style.opacity = 0.1 + value * 0.0065;
-        right_near_rock.style.left = value * 1.25 + 'px';
-        left_near_rock.style.right = value * 1.25 + 'px';
-        cloud.style.bottom = value * 0.15 + 'px';
-        cloud.style.width = currentCloudWidth + value * 2.5 + 'px';
-        lake.style.width = currentLakeWidth + value * 0.7 + 'px';
-        gate.style.width = currentGateWidth + value * 0.7 + 'px';
-        left_far_rock.style.width = currentLeftFarRockWidth + value * 0.7 + 'px';
-        right_far_rock.style.width = currentRightFarRockWidth + value * 0.7 + 'px';
-    });
+    homePageParallax();
+    function homePageParallax() {
+        var home_background = document.getElementById('home_background');
+        var logo_long = document.getElementById('logo_long');
+        var sun = document.getElementById('sun');
+        var light = document.getElementById('light');
+        var lake = document.getElementById('lake');
+        var gate = document.getElementById('gate');
+        var stars = document.getElementById('stars');
+        var cloud = document.getElementById('cloud');
+        var left_near_rock = document.getElementById('left_near_rock');
+        var right_near_rock = document.getElementById('right_near_rock');
+        var left_far_rock = document.getElementById('left_far_rock');
+        var right_far_rock = document.getElementById('right_far_rock');
+        var night_overlay = document.getElementById('night_overlay');
+    
+        var currentCloudWidth = cloud.clientWidth;
+        var currentLakeWidth = lake.clientWidth;
+        var currentGateWidth = gate.clientWidth;
+        var currentLeftFarRockWidth = left_far_rock.clientWidth;
+        var currentRightFarRockWidth = right_far_rock.clientWidth;
+    
+        var homeScrollLimit = 475;
+    
+    
+        window.addEventListener('scroll', function() {
+            var value_base = this.window.scrollY;
+            if  (value_base < homeScrollLimit) {
+                var value = value_base;
+            } else {
+                value = homeScrollLimit;
+            }
+    
+            logo_long.style.opacity = 1 - value * 0.0065;
+            home_background.style.top = value + 'px';
+            sun.style.top = value * 0.25 + 'px';
+            light.style.top = value * 0.25 + 'px';
+            sun.style.opacity = 1 - value * 0.001;
+            light.style.opacity = 1 - value * 0.0025;
+            night_overlay.style.opacity = value * 0.0025;
+            stars.style.top = value * 0.75 + 'px';
+            stars.style.opacity = 0.1 + value * 0.0065;
+            right_near_rock.style.left = value * 1.25 + 'px';
+            left_near_rock.style.right = value * 1.25 + 'px';
+            cloud.style.bottom = value * 0.15 + 'px';
+            cloud.style.width = currentCloudWidth + value * 2.5 + 'px';
+            lake.style.width = currentLakeWidth + value * 0.7 + 'px';
+            gate.style.width = currentGateWidth + value * 0.7 + 'px';
+            left_far_rock.style.width = currentLeftFarRockWidth + value * 0.7 + 'px';
+            right_far_rock.style.width = currentRightFarRockWidth + value * 0.7 + 'px';
+        });
+    };
     // --------------------
 
     // Float Animation
-    
     window.addEventListener('scroll', function() {
         var value_base = this.window.scrollY;
 
@@ -95,16 +101,14 @@ window.onload=function(){
                 pictureLayer.style.display = 'block'
             });
         }
-        console.log(value_base);
     });
-
-    // Virus function
-    var virusIsAppear = false;
+    // --------------------
 
     // Bottom scroll
     window.addEventListener('scroll', function() {
         const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
         const scrolled = window.scrollY;
+        var virusIsAppear = false;
         
         if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
             virusIsAppear = true;
@@ -116,13 +120,16 @@ window.onload=function(){
             showFooter ();
         };
     });
-
+    // --------------------
     
+    // Show Footer Function
     function showFooter () {
         var footer = document.querySelector('footer');
         footer.style.display = 'flex';
     }
-    
+    // --------------------
+
+    // Virus Appear Function
     function virusAppear () {
         
         var body = document.body,
@@ -175,6 +182,7 @@ window.onload=function(){
             }, 500)
         });
     }
+    // --------------------
 
     // Thêm class virus_hideText_list vào những chỗ cần ẩn chữ
     function hideText() {
@@ -191,7 +199,9 @@ window.onload=function(){
             virus_hideText_list[i].innerHTML = hidedText4;
         }
     }
+    // --------------------
     
+    // Change Home Page Function
     function changeHomePage () {
         var virus_overlay = document.getElementById('virus_overlay');
         
@@ -204,27 +214,34 @@ window.onload=function(){
         night_overlay.style.display = 'none';
         virus_overlay.style.opacity = 1;
     }
+    // --------------------
 
-    var passwordBtn = document.getElementById('check_password_button');
-    passwordBtn.addEventListener('click', checkPassword);
+    // Check Password Function
+    password();
+    function password() {
+        var passwordBtn = document.getElementById('check_password_button');
+        passwordBtn.addEventListener('click', checkPassword);
+        
+        function checkPassword () {
+            var password = document.getElementById('password').value;
+            var passwordResult = document.getElementById('password_result');
+            var correctPassword = 'bình';
     
-    function checkPassword () {
-        var password = document.getElementById('password').value;
-        var passwordResult = document.getElementById('password_result');
-        var correctPassword = 'bình';
-
-        if (password == correctPassword) {
-            passwordResult.innerHTML = 'Correct Password';
-            passwordResult.style.color = 'green';
-            bugs.style.display = 'none';
-        } else {
-            passwordResult.innerHTML = 'Incorrect Password';
-            passwordResult.style.color = 'red';
-            addVirus();
-
+            if (password == correctPassword) {
+                passwordResult.innerHTML = 'Correct Password';
+                passwordResult.style.color = 'green';
+                bugs.style.display = 'none';
+            } else {
+                passwordResult.innerHTML = 'Incorrect Password';
+                passwordResult.style.color = 'red';
+                addVirus();
+    
+            }
         }
-    }
+    };
+    // --------------------
 
+    // Add Virus Function
     function addVirus() {
         var bugsList = document.getElementById('bugs');
         var bugsListAdd = bugsList.innerHTML + '<div class="bug"><img src="../assets/img/bug.png" alt=""></div>';
@@ -232,5 +249,5 @@ window.onload=function(){
         bugsList.innerHTML = bugsListAdd;
         virusAppear();
     }
-    // --------------------------------
+    // --------------------
 }
