@@ -626,7 +626,6 @@ header #sub-menu-container a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
-    font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -635,17 +634,18 @@ header #sub-menu-container a {
 }
 
 #activities .heading {
-    font-family: 'Lato', sans-serif;
+    font-family: var(--title-font);
 	font-weight: bold;	
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
     margin: 3%;
     z-index: 10;
     
+    
 }
 
 #activities .content {
-    font-family: 'Lato', sans-serif;
+    font-family: var(--describion-font);
 	font-weight: 300;
     font-size: 25px;
     text-align: center;
