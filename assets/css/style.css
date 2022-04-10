@@ -531,12 +531,13 @@ header #sub-menu-container a {
 #jsc .jsc-title .jsc-title-transparent {
     position: absolute;
     display: flex;
-    top: 0;
+    top: 25%;
     bottom: 0;
     left: 0;
-    text-align: right;
+    text-align: center;
     align-items: center;
-    width: 35%;
+    width: 100%;
+    height:50%;
     padding: 0 2%;
     font-size: 5vw;
     background-color: #fff;
@@ -548,10 +549,11 @@ header #sub-menu-container a {
 #jsc .jsc-title .jsc-title-shadow {
     position: absolute;
     display: flex;
-    top: 0;
+    top: 25%;
     bottom: 0;
     left: 0;
-    width: 35%;
+    width: 100%;
+    height: 50%;
     padding: 0 20px;
 
 }
@@ -565,7 +567,7 @@ header #sub-menu-container a {
     right: 0;
     text-align: justify;
     justify-content: center;
-    width: 62%;
+    width: 100%;
     padding: 0 5%;
     font-size: 1.8vw;
     background-color: #fff;
