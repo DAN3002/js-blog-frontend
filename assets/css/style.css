@@ -291,14 +291,38 @@ header #sub-menu-container a {
 
 /*----------------HISTORY------------------*/
 #history {
-
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin: 10px;
+    margin-top: 20px;
 }
+
+#history .content {
+    align-items: center;
+}
+
 
 #history .title {
     margin-top: 40px;
     font-size: 70px;
     font-weight: bold;
     font-family: var(--title-font);
+    text-align: left;
+}
+
+#history .content {
+    justify-content: center;
+    align-items: center;
+}
+
+#history .content .description {
+    text-align: left;  
+    align-items: center;
+    align-items: center;
+    font-family: var(--description-font);
+    font-size: 30px;
+    display: flex;
+
 }
 /* Slideshow container */
 .slideshow-container {
@@ -448,7 +472,7 @@ header #sub-menu-container a {
 
 #department .content {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     align-items: center;
     display: flex;
     font-family: var(--description-font);
@@ -456,6 +480,7 @@ header #sub-menu-container a {
 
 #department .header {
     font-weight: bold;
+    font-size: 30px;
     align-items: center;
     font-family: var(--title-font);
 }
@@ -516,6 +541,7 @@ header #sub-menu-container a {
 }
 #department .img-style {
     width: 100%; 
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
