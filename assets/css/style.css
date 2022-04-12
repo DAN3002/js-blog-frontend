@@ -295,7 +295,7 @@ header #sub-menu-container a {
 #history {
     height: 750px;
     padding: 100px;
-    background-color: #ccc;
+    background-color: #fff;
 }
 
 #history .history-container {
@@ -433,13 +433,14 @@ header #sub-menu-container a {
   
 /*-------------DEPARTMENT-----------------*/
 #department {
-    /* grid-template-rows: auto auto auto auto auto; */
+    background-color:#fff;
 }
 .department-title {
     margin-top: 40px;
     font-size: 70px;
     font-weight: bold;
     font-family: var(--title-font);
+    
 }
 
 .department-desc {
@@ -483,7 +484,8 @@ header #sub-menu-container a {
 
 #department .content {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 22px;
+    margin: 5px;
     align-items: center;
     display: flex;
     font-family: var(--description-font);
@@ -491,7 +493,7 @@ header #sub-menu-container a {
 
 #department .header {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     align-items: center;
     font-family: var(--title-font);
 }
@@ -520,14 +522,14 @@ header #sub-menu-container a {
     
 }
 .flex1, .flex3, .flex5 {
-    width: 25%;
+    width: 33.33%;
     background-color: #24325b;
     color: #fff;
     /* border-radius: 20px;   */
 }
 
 .flex2, .flex4, .flex6 {
-    width: 25%;
+    width: 33.33%;
     background-color: #fff;
     color: #24325b;
     /* border-radius: 20px; */
