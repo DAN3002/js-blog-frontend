@@ -94,8 +94,8 @@ window.onload=function(){
             homeSec.style.display = 'flex';
         }
 
-        var historyContainer = document.querySelector('#history .historyContainer');
-        if (value_base > 700) {
+        var historyContainer = document.querySelector('#history .history-container');
+        if (value_base > 700) {git 
             historyContainer.style.display = 'flex';
         }
         
