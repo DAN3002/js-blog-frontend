@@ -509,10 +509,12 @@ header #sub-menu-container a {
 .flex00, .flex10 {
     order: 1;
     width: 12.5%;
+    background-color: #fff;
 }
 .flex01, .flex11 {
     order: 5;
     width: 12.5%;
+    background-color: #fff;
 }
 #department .img-style {
     width: 100%; 
