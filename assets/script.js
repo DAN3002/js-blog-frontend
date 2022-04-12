@@ -93,8 +93,13 @@ window.onload=function(){
         if (value_base > 350) {
             homeSec.style.display = 'flex';
         }
+
+        var historyContainer = document.querySelector('#history .historyContainer');
+        if (value_base > 700) {
+            historyContainer.style.display = 'flex';
+        }
         
-        var picturesLayer = document.querySelectorAll('#activities .pictureLayer');
+        var picturesLayer = document.querySelectorAll('#activities .activitiesContainer');
         var picturesLayer_array = [...picturesLayer];
         if (value_base > 4600) {
             picturesLayer_array.forEach(pictureLayer => {

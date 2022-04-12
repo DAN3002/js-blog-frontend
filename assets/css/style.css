@@ -430,6 +430,17 @@ header #sub-menu-container a {
     font-family: var(--description-font);
     text-align: left;
 }
+
+@keyframes historyFloatIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
   
 /*-------------DEPARTMENT-----------------*/
 #department {
