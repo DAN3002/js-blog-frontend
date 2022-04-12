@@ -444,10 +444,13 @@ header #sub-menu-container a {
   
 /*-------------DEPARTMENT-----------------*/
 #department {
-    background-color:#fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color:rgb(255,248,255);
 }
 .department-title {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     font-size: 70px;
     font-weight: bold;
     font-family: var(--title-font);
@@ -530,6 +533,7 @@ header #sub-menu-container a {
     text-align: left;
     justify-content: center;
     align-items: center;
+    height: 100%;
     
 }
 .flex1, .flex3, .flex5 {

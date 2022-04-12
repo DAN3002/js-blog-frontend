@@ -94,12 +94,12 @@ window.onload=function(){
             homeSec.style.display = 'flex';
         }
 
-        var historyContainer = document.querySelector('#history .history-container');
-        if (value_base > 700) {git 
-            historyContainer.style.display = 'flex';
+        var history = document.querySelector('#history .history-container');
+        if (value_base > 650) {
+            history.style.display = 'flex';
         }
         
-        var picturesLayer = document.querySelectorAll('#activities .activitiesContainer');
+        var picturesLayer = document.querySelectorAll('#activities .pictureLayer');
         var picturesLayer_array = [...picturesLayer];
         if (value_base > 4600) {
             picturesLayer_array.forEach(pictureLayer => {
