@@ -104,6 +104,67 @@ window.onload=function(){
     });
     // --------------------
 
+    // Slider function
+    slider();
+    function slider() {
+        const slider = document.querySelector('.slider');
+        const sliderMain = document.querySelector('.slider-main');
+        const sliderItems = document.querySelectorAll('.slider-item');
+        const sliderPrevBtn = document.querySelector('.prevBtn');
+        const sliderNextBtn = document.querySelector('.nextBtn');
+        const dotItems = document.querySelectorAll('.slider-dot-item');
+        
+        const sliderLength = sliderItems.length;
+        const sliderItemWidth = sliderItems[0].offsetWidth
+        var posX = 0;
+        var index = 1;
+        
+        
+        sliderNextBtn.addEventListener('click', function() {
+            handleChangeSlide(1);
+        });
+
+        sliderPrevBtn.addEventListener('click', function() {
+            handleChangeSlide(-1)
+        });
+
+        [...dotItems].forEach((dotItem) =>
+            dotItem.addEventListener('click', function(e) {
+                [...dotItems].forEach(el => el.classList.remove('active'));
+                e.target.classList.add('active');
+                const slideIndex = parseInt(e.target.dataset.index);
+                index = slideIndex;
+                posX = -1 * (index - 1) * sliderItemWidth;
+                sliderMain.style.transform = "translateX(" + posX + "px)";
+            })
+        );
+
+        function handleChangeSlide(dir) {
+            if(dir === 1) {
+                index++;
+                if (index > sliderLength) {
+                    index = sliderLength;
+                    return;
+                };
+                posX = posX - sliderItemWidth;
+                sliderMain.style.transform = "translateX(" + posX + "px)";
+            } else if (dir === -1) {
+                index--;
+                if (index < 1) {
+                    index = 1;
+                    return;
+                };
+                posX = posX + sliderItemWidth;
+                sliderMain.style.transform = "translateX(" + posX + "px)";
+            }
+
+            [...dotItems].forEach(el => el.classList.remove('active'));
+            dotItems[index-1].classList.add('active');
+        }
+    };
+    
+    // --------------------
+    
     // Bottom scroll
     window.addEventListener('scroll', function() {
         const scrollAble = document.documentElement.scrollHeight - window.innerHeight;

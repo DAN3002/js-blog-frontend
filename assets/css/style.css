@@ -53,12 +53,14 @@ header #menu-btn {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 0.15s linear;
 }
 
 header #menu-btn:hover {
     cursor: pointer;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: 0.15s linear;
 }
 
 /* Hamburger menu*/
@@ -259,7 +261,7 @@ header #sub-menu-container a {
 }
 
 #home .home-sec .home-sec-text {
-    width: 43%;
+    width: 45%;
 }
 
 #home .home-sec h2 {
@@ -291,111 +293,142 @@ header #sub-menu-container a {
 
 /*----------------HISTORY------------------*/
 #history {
-
+    height: 750px;
+    padding: 100px;
+    background-color: #ccc;
 }
 
-#history .title {
-    margin-top: 40px;
-    font-size: 70px;
-    font-weight: bold;
-    font-family: var(--title-font);
+#history .history-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }
-/* Slideshow container */
-.slideshow-container {
-    /* max-width: 1000px; */
-    max-width: 40%;
+
+#history .slider {
     position: relative;
-    margin: auto;
+    width: 40%;
+    height: 100%;
 }
-  
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-#history .img-style {
+
+#history .slider .slider-wrapper {
+    position: relative;
     width: 100%;
-    height: 505px;
-    object-fit: contain;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
 }
-  
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.3);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+
+#history .slider .slider-main {
+    display: flex;
+    position: relative;
+    height: 100%;
+    transition: transform 0.25s linear;
 }
-  
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-  
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-  
-/* Caption text */
-.text {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 0 0 20px 20px;
-    font-size: 24px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 4px;
+
+#history .slider-item {
     width: 100%;
-    text-align: center;
-    font-family: var(--description-font);
+    height: 100%;
+    flex: 1 0 100%;
 }
-  
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #fff;
-    background-color: rgba(0,0,0,0.3);
-    font-size: 12px;
-    padding: 8px 12px;
+
+#history .slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#history .slider .slider-button-container {
     position: absolute;
-    top: 0;
-    font-family: var(--description-font);
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-  
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
+
+#history .slider-button-container .slider-btn {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    transition: 0.1s linear;
 }
-  
-.active, .dot:hover {
-    background-color: #717171;
+
+#history .slider-button-container .slider-btn:hover {
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: 0.1s linear;
+    font-size: 20px;
 }
-  
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+
+#history .slider-button-container .prevBtn {
+    transform: translateX(-50%);
 }
-  
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+
+#history .slider-button-container .nextBtn {
+    transform: translateX(50%);
+}
+
+#history .slider .slider-dots {
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#history .slider-dots .slider-dot-item {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(113, 113, 113);
+    border-radius: 50%;
+    margin: 0 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 0.1s linear;
+}
+
+#history .slider-dots .slider-dot-item:hover {
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.1s linear;
+    cursor: pointer;
+}
+
+#history .slider-dots .slider-dot-item.active {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.1s linear;
+}
+
+#history .history-content {
+    width: 45%;
+}
+
+#history .history-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-family: var(--title-font);
+    text-align: left;
+}
+
+#history .history-content p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    font-family: var(--description-font);
+    text-align: left;
 }
   
 /*-------------DEPARTMENT-----------------*/
@@ -448,7 +481,7 @@ header #sub-menu-container a {
 
 #department .content {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     align-items: center;
     display: flex;
     font-family: var(--description-font);
@@ -456,6 +489,7 @@ header #sub-menu-container a {
 
 #department .header {
     font-weight: bold;
+    font-size: 30px;
     align-items: center;
     font-family: var(--title-font);
 }
@@ -518,6 +552,7 @@ header #sub-menu-container a {
 }
 #department .img-style {
     width: 100%; 
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -658,7 +693,7 @@ header #sub-menu-container a {
 }
 
 #activities .content {
-    font-family: var(--describion-font);
+    font-family: --description-font
 	font-weight: 300;
     font-size: 25px;
     text-align: center;
