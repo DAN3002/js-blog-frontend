@@ -450,9 +450,11 @@ header #sub-menu-container a {
 }
 .department-img-list {
     margin: 20px 0;
-    border-top: 50px solid #000;     
-    border-bottom: 50px solid #000; 
     margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+    position: flex;
+    margin: 0 auto;
 }
 .department-row1, .department-row2 {
     display: flex;
@@ -517,14 +519,14 @@ header #sub-menu-container a {
     align-items: center;
     
 }
-.flex1, .flex3, .flex5, .flex11, .flex10 {
+.flex1, .flex3, .flex5 {
     width: 25%;
     background-color: #24325b;
     color: #fff;
     /* border-radius: 20px;   */
 }
 
-.flex2, .flex4, .flex6, .flex00, .flex01 {
+.flex2, .flex4, .flex6 {
     width: 25%;
     background-color: #fff;
     color: #24325b;
@@ -540,14 +542,7 @@ header #sub-menu-container a {
 .flex3, .flex6 {
     order: 4;
 }
-.flex00, .flex10 {
-    order: 1;
-    width: 12.5%;
-}
-.flex01, .flex11 {
-    order: 5;
-    width: 12.5%;
-}
+
 #department .img-style {
     width: 100%; 
     height: 100%;
@@ -691,7 +686,7 @@ header #sub-menu-container a {
 }
 
 #activities .content {
-    font-family: --description-font
+    font-family: --description-font;
 	font-weight: 300;
     font-size: 25px;
     text-align: center;
