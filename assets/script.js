@@ -1,4 +1,5 @@
 window.onload=function(){
+    let activeVirusMode = false;
 
     // Hamburger Menu function
     hamburgerMenu();
@@ -172,19 +173,22 @@ window.onload=function(){
     
     // Bottom scroll
     window.addEventListener('scroll', function() {
-        const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
-        const scrolled = window.scrollY;
-        var virusIsAppear = false;
-        
-        if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
-            virusIsAppear = true;
+        if (!activeVirusMode) {
+            const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY;
+            var virusIsAppear = false;
             
-            window.scrollTo(0, 0);
-            virusAppear();
-            hideText();
-            changeHomePage();
-            showFooter ();
-        };
+            if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
+                activeVirusMode = true;
+                virusIsAppear = true;
+                
+                window.scrollTo(0, 0);
+                virusAppear();
+                hideText();
+                changeHomePage();
+                showFooter ();
+            };
+        }
     });
     // --------------------
     
