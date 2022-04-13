@@ -173,22 +173,22 @@ window.onload=function(){
     
     // Bottom scroll
     window.addEventListener('scroll', function() {
-        if (!activeVirusMode) {
-            const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = window.scrollY;
-            var virusIsAppear = false;
+        // if (!activeVirusMode) {
+        //     const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
+        //     const scrolled = window.scrollY;
+        //     var virusIsAppear = false;
             
-            if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
-                activeVirusMode = true;
-                virusIsAppear = true;
+        //     if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
+        //         activeVirusMode = true;
+        //         virusIsAppear = true;
                 
-                window.scrollTo(0, 0);
-                virusAppear();
-                hideText();
-                changeHomePage();
-                showFooter ();
-            };
-        }
+        //         window.scrollTo(0, 0);
+        //         virusAppear();
+        //         hideText();
+        //         changeHomePage();
+        //         showFooter ();
+        //     };
+        // }
     });
     // --------------------
     
