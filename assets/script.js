@@ -1,4 +1,5 @@
 window.onload=function(){
+    let activeVirusMode = false;
 
     // Hamburger Menu function
     hamburgerMenu();
@@ -187,22 +188,25 @@ window.onload=function(){
     // --------------------
     
     // Bottom scroll
-    var virusIsAppear = false;
     var interviewMarginBottom = document.getElementById('interview')
     window.addEventListener('scroll', function() {
-        const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
-        const scrolled = window.scrollY;
-        
-        if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
-            virusIsAppear = true;
+        if (!activeVirusMode) {
+            const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY;
+            var virusIsAppear = false;
             
-            interviewMarginBottom.style.marginBottom = 0;
-            window.scrollTo(0, 0);
-            virusAppear();
-            hideText();
-            changeHomePage();
-            showFooter ();
-        };
+            if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
+                activeVirusMode = true;
+                virusIsAppear = true;
+                interviewMarginBottom.style.marginBottom = 0;
+                
+                window.scrollTo(0, 0);
+                virusAppear();
+                hideText();
+                changeHomePage();
+                showFooter ();
+            };
+        }
     });
     // --------------------
     
