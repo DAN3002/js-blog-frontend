@@ -198,7 +198,6 @@ window.onload=function(){
             if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
                 activeVirusMode = true;
                 virusIsAppear = true;
-                interviewMarginBottom.style.marginBottom = 0;
                 
                 window.scrollTo(0, 0);
                 virusAppear();

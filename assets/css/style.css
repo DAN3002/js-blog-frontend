@@ -784,7 +784,7 @@ header #sub-menu-container a {
 #interview {
     height: 800px;
     margin-top: 50px;
-    margin-bottom: 100vh;
+    /* margin-bottom: 100vh; */
 }
 
 #interview .interview-title {
