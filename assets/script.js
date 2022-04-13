@@ -86,6 +86,7 @@ window.onload=function(){
     // --------------------
 
     // Float Animation
+    var value = window.scrollY;
     window.addEventListener('scroll', function() {
         var value_base = this.window.scrollY;
 
@@ -94,18 +95,33 @@ window.onload=function(){
             homeSec.style.display = 'flex';
         }
 
-        var history = document.querySelector('#history .history-container');
-        if (value_base > 650) {
-            history.style.display = 'flex';
+        var history = document.querySelector('#history .history-content');
+        if (value_base > 1000) {
+            history.style.display = 'block'
+        }
+
+        var jscTitle = this.document.querySelector('#jsc .jsc-title .jsc-title-transparent');
+        if (value_base > 4800) {
+            jscTitle.style.display = 'flex'
+        }
+
+        var jscDesc = this.document.querySelectorAll('#jsc .jsc-desc');
+        var jscDesc_array = [...jscDesc];
+        if (value_base > 5200) {
+            jscDesc_array.forEach(desc => {
+                desc.style.display = 'flex'
+            });
         }
         
         var picturesLayer = document.querySelectorAll('#activities .pictureLayer');
         var picturesLayer_array = [...picturesLayer];
-        if (value_base > 4600) {
+        if (value_base > 5800) {
             picturesLayer_array.forEach(pictureLayer => {
                 pictureLayer.style.display = 'block'
             });
         }
+
+        console.log(value_base);
     });
     // --------------------
 
@@ -171,14 +187,16 @@ window.onload=function(){
     // --------------------
     
     // Bottom scroll
+    var virusIsAppear = false;
+    var interviewMarginBottom = document.getElementById('interview')
     window.addEventListener('scroll', function() {
         const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
         const scrolled = window.scrollY;
-        var virusIsAppear = false;
         
         if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
             virusIsAppear = true;
             
+            interviewMarginBottom.style.marginBottom = 0;
             window.scrollTo(0, 0);
             virusAppear();
             hideText();
@@ -257,7 +275,7 @@ window.onload=function(){
         for (var i = 0; i < virus_hideText_list.length; i++) {
             var virus_hideText = virus_hideText_list[i].innerHTML
             
-            var hidedText = virus_hideText.replace(/[b]/g, '🔼');
+            var hidedText = virus_hideText.replace(/[B]/g, '🔼');
             var hidedText2 = hidedText.replace(/[ì]/g, '👨🏻‍💼');
             var hidedText3 = hidedText2.replace(/[n]/g, '🔽');
             var hidedText4 = hidedText3.replace(/[h]/g, '🙍🏻‍♂️');
@@ -291,7 +309,7 @@ window.onload=function(){
         function checkPassword () {
             var password = document.getElementById('password').value;
             var passwordResult = document.getElementById('password_result');
-            var correctPassword = 'bình';
+            var correctPassword = 'Bình';
     
             if (password == correctPassword) {
                 passwordResult.innerHTML = 'Correct Password';
