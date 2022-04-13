@@ -309,6 +309,7 @@ header #sub-menu-container a {
     height: 100%;
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #history .slider .slider-main {
@@ -329,6 +330,29 @@ header #sub-menu-container a {
     height: 100%;
     object-fit: cover;
     object-position: top;
+}
+
+#history .slider-item .desc {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    background-color: #fff;
+    opacity: 0.9;
+    padding: 10px 0;
+}
+
+#history .slider-item h3 {
+    font-family: var(--title-font);
+    font-size: 2em;
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+#history .slider-item p {
+    font-family: var(--description-font);
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--secondary-text-color);
 }
 
 #history .slider .slider-button-container {
